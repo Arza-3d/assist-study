@@ -11,7 +11,7 @@
         Konversi tag jadi &amp;gt;
     </p>
     <form action="" method="get" accept-charset="utf-8">
-        <input type="text" id="input1" value="" />
+        <input type="text" id="input1" />
         <button type="submit" onclick="replaceTag">replace tag</button>
     </form>
     
@@ -22,11 +22,13 @@
     </div>
     
     <script type="text/javascript" charset="utf-8">
-        let inputString = document.getElementById();
+        let input1 = document.getElementById("input1");
+        let input1Text = input1.innerHtml;
     
-        function replaceTag() {
-            
-        }
+        let result1 = input1Text.replace("<", "&lt;");
+        result1 = result1.replace(">", "&gt;");
+        
+        
     </script>
 
 </body>
