@@ -34,13 +34,15 @@
             return newText;
         }
     
-        function makeNewTag() {
+        function replaceTag() {
             
             let input1Text = input1.innerHtml;
             
             let newText = changeTag(input1Text);
             
-            result1.innerHtml = newText
+            result1.innerHtml = newText;
+            
+            alert("yo");
             
         }
         
