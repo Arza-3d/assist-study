@@ -23,7 +23,7 @@
     
     <script type="text/javascript" charset="utf-8">
         let input1 = document.getElementById("input1");
-        let result1 = document.
+        let result1 = document.getElementById("result1");
         
         function changeTag(myText) {
             let newText = "";
@@ -40,6 +40,7 @@
             
             let newText = changeTag(input1Text);
             
+            result1.innerHtml = newText
             
         }
         
