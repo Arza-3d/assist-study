@@ -28,8 +28,8 @@
         function changeTag(myText) {
             let newText = "";
             
-            newText = myText.replace("<", "&lt;");
-            newText = newText.replace(">", "&gt;");
+            newText = myText.replace("<", "&amp;lt;");
+            newText = newText.replace(">", "&amp;gt;");
             
             return newText;
         }
