@@ -55,11 +55,11 @@
                 // check session
                 if (typeof(Storage) != undefined) {
                     sessionStorage.setItem("input1", "<span>text</span>");
-                    alert("tesssst");
                 }
                 
                 // Code 1 input 1
                     let input1 = document.getElementById("input1");
+                    input1.sessionStorage.get();
                     input1.placeholder = input1.value;
 
                     let result1 = document.getElementById("result1");
