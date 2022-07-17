@@ -40,7 +40,7 @@
                 <p>
                     Konversi tag jadi &amp;gt;
                 </p>
-                <input type="text" id="input1" onkeyup="replaceTag()"/>
+                <input type="text" id="input1" onkeyup="replaceTag()" v/>
                 
 
                 <pre id="result1">
@@ -81,8 +81,6 @@
                         let newText = changeTag(input1Text);
 
                         result1.innerHTML = newText;
-                        
-                        sessionStorage.setItem = input1.value;
 
                     }
 
