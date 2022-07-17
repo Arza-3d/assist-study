@@ -42,7 +42,7 @@
                     Konversi tag jadi &amp;gt;
                 </p>
                 <form action="" method="get" accept-charset="utf-8">
-                    <input type="text" id="input1" value="<span>text</span>" />
+                    <input type="text" id="input1" />
                     <button type="submit" onclick="replaceTag()">replace tag</button>
                 </form>
 
@@ -59,7 +59,7 @@
                 
                 // Code 1 input 1
                     let input1 = document.getElementById("input1");
-                    input1.sessionStorage.get();
+                    input1.value = sessionStorage.getItem("input1");
                     input1.placeholder = input1.value;
 
                     let result1 = document.getElementById("result1");
