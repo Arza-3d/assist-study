@@ -11,7 +11,7 @@
         Konversi tag jadi &amp;gt;
     </p>
     <form action="" method="get" accept-charset="utf-8">
-        <input type="text" id="input1" />
+        <input type="text" id="input1" value="<span>" />
         <button type="submit" onclick="replaceTag()">replace tag</button>
     </form>
     
@@ -42,11 +42,9 @@
             
             result1.innerHTML = newText;
             
-            alert("yo");
-            
         }
         
-        
+        replaceTag();
     </script>
 
 </body>
