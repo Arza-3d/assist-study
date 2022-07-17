@@ -54,10 +54,10 @@
                 // check session
                 if (typeof(Storage) != undefined) {
                     
-                    if (sessionStorage.getItem("input1") == ) {
-                        
+                    if (sessionStorage.getItem("input1") == null) {
+                        sessionStorage.setItem("input1", "<span>text</span>");
                     }
-                    sessionStorage.setItem("input1", "<span>text</span>");
+                    
                 }
                 
                 // Code 1 input 1
