@@ -1,52 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://image.ibb.co/nqbdHJ/titlelogo.png" rel="icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
 
-    <title>assist</title>
+    <title>Assist</title>
 
 </head>
+<body
+    data-repo-r3="https://github.com/Arza-3d/doc-css"
+    data-headers-r3="> div > h2| > div > h3| div > section > h4"
+    >
+    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
+    <header>
+        <h1>assist nyatet</h1>
+        <h4>assist nyatet macem2 bahasa pemrograman</h4>
+        <table>
+            <tr>
+                <td>project repo</td>
+                <td><a href="https://github.com/Arza-3d/doc-css">https://github.com/Arza-3d/doc-js-css</a></td>
+            </tr>
+        </table>
+        <p>
+            Catatan CSS
+        </p>
+    </header>
+    <main class="aside-nav-target-r3">
 
-<body>
-    
-    <p>
-        Konversi tag jadi &amp;gt;
-    </p>
-    <form action="" method="get" accept-charset="utf-8">
-        <input type="text" id="input1" value="<span>text</span>" />
-        <button type="submit" onclick="replaceTag()">replace tag</button>
-    </form>
-    
-    <pre id="result1">
+        <div data-title-r3="bantu catatan html">
+
+            <h2>assist dokumen html</h2>
             
-    </pre>
-    
-    <script type="text/javascript" charset="utf-8">
-        let input1 = document.getElementById("input1");
-        input1.placeholder = input1.value;
-        
-        let result1 = document.getElementById("result1");
-        
-        function changeTag(myText) {
-            let newText = "";
-            
-            newText = myText.replace(/</g, "&amp;lt;");
-            newText = newText.replace(/>/g, "&amp;gt;");
-            
-            return newText;
-        }
-    
-        function replaceTag() {
-            
-            let input1Text = input1.value;
-            
-            let newText = changeTag(input1Text);
-            
-            result1.innerHTML = newText;
-            
-        }
-        
-        replaceTag();
-    </script>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <h3>ganti tag jadi &amp;gt;</h3>
+            <section>
+                <p>
+                    Konversi tag jadi &amp;gt;
+                </p>
+                <form action="" method="get" accept-charset="utf-8">
+                    <input type="text" id="input1" value="<span>text</span>" />
+                    <button type="submit" onclick="replaceTag()">replace tag</button>
+                </form>
+
+                <pre id="result1">
+
+                </pre>
+
+                <script type="text/javascript" charset="utf-8">
+                    let input1 = document.getElementById("input1");
+                    input1.placeholder = input1.value;
+
+                    let result1 = document.getElementById("result1");
+
+                    function changeTag(myText) {
+                        let newText = "";
+
+                        newText = myText.replace(/</g, "&amp;lt;");
+                        newText = newText.replace(/>/g, "&amp;gt;");
+
+                        return newText;
+                    }
+
+                    function replaceTag() {
+
+                        let input1Text = input1.value;
+
+                        let newText = changeTag(input1Text);
+
+                        result1.innerHTML = newText;
+
+                    }
+
+                    replaceTag();
+                </script>
+
+            </section>
+
+
+        </div>
+
+    </main>
+    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
+
+</script>
 
 </body>
 </html>
