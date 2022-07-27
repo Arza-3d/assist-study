@@ -55,9 +55,6 @@
 
       <script type="text/javascript" charset="utf-8">
 
-
-
-        // Code 1 input 1
         let input1 = document.getElementById("input1");
 
         input1.placeholder = input1.value;
@@ -69,10 +66,8 @@
 
           newText = myText.replace(/</g, "&amp;lt;");
           newText = newText.replace(/>/g, "&amp;gt;");
-          //change newline
           newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
           newText = newText.replace(/ /g, "&amp;nbsp;");
-
 
           return newText;
         }
@@ -84,10 +79,8 @@
           let newText = changeTag(input1Text);
 
           result1.innerHTML = newText;
-
         }
 
-        replaceTag();
       </script>
 
     </section>
