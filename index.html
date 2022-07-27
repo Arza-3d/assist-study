@@ -71,7 +71,7 @@
           newText = newText.replace(/>/g, "&amp;gt;");
           //change newline
           newText = newText.replace(/\n/g, "<br>");
-          newText = newText.repl
+          newText = newText.replace(/ /g, "&nbsp;");
 
 
           return newText;
