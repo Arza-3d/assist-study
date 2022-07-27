@@ -1,145 +1,151 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://image.ibb.co/nqbdHJ/titlelogo.png" rel="icon">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://image.ibb.co/nqbdHJ/titlelogo.png" rel="icon">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
 
-    <title>Assist</title>
+  <title>Assist</title>
 
 </head>
 <body
-    data-repo-r3="https://github.com/Arza-3d/doc-css"
-    data-headers-r3="> div > h2| > div > h3| div > section > h4"
-    >
-    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
-    <header>
-        <h1>assist nyatet</h1>
-        <h4>assist nyatet macem2 bahasa pemrograman</h4>
-        <table>
-            <tr>
-                <td>project repo</td>
-                <td><a href="https://github.com/Arza-3d/doc-css">https://github.com/Arza-3d/doc-js-css</a></td>
-            </tr>
-        </table>
-        
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </header>
-    <main class="aside-nav-target-r3">
+  data-repo-r3="https://github.com/Arza-3d/doc-css"
+  data-headers-r3="> div > h2| > div > h3| div > section > h4"
+  >
+  <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
+  <header>
+    <h1>assist nyatet</h1>
+    <h4>assist nyatet macem2 bahasa pemrograman</h4>
+    <table>
+      <tr>
+        <td>project repo</td>
+        <td><a href="https://github.com/Arza-3d/doc-css">https://github.com/Arza-3d/doc-js-css</a></td>
+      </tr>
+    </table>
 
-        <div data-title-r3="bantu catatan html">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </header>
+  <main class="aside-nav-target-r3">
 
-            <h2>assist dokumen html</h2>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div data-title-r3="bantu catatan html">
 
-            <h3>ganti tag jadi &amp;gt;</h3>
-            <section>
-                <p>
-                    Konversi tag jadi &amp;gt;
-                </p>
-                <textarea type="text" id="input1" onkeyup="replaceTag()"/>
-                
-                </textarea>
-                
+      <h2>assist dokumen html</h2>
 
-                <pre id="result1">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
 
-                </pre>
+      <h3>ganti tag jadi &amp;gt;</h3>
+      <section>
+        <p>
+          Konversi tag jadi &amp;gt;
+        </p>
+        <textarea type="text" id="input1" onkeyup="replaceTag()" />
 
-                <script type="text/javascript" charset="utf-8">
-                
-       
-                
-                // Code 1 input 1
-                    let input1 = document.getElementById("input1");
-                    
-                    input1.placeholder = input1.value;
-
-                    let result1 = document.getElementById("result1");
-
-                    function changeTag(myText) {
-                        let newText = "";
-
-                        newText = myText.replace(/</g, "&amp;lt;");
-                        newText = newText.replace(/>/g, "&amp;gt;");
-                        //change newline
-                        
-                        newText = newText.replace(/\n/g, "<br>");
-
-                        return newText;
-                    }
-
-                    function replaceTag() {
-
-                        let input1Text = input1.value;
-
-                        let newText = changeTag(input1Text);
-                        
-                        result1.innerHTML = newText;
-
-                    }
-
-                    replaceTag();
-                </script>
-
-            </section>
-            
-            <h3>test2</h3>
-            <section>
-                   <input type="text" id="input2" onkeyup="replaceTag()" value="<span>text</span>"/>
-                
-
-                <pre id="result2">
-
-                </pre>
-                
-            </section>
+      </textarea>
 
 
-        </div>
+      <pre id="result1">
 
-    </main>
-    
-    <script type="text/javascript" charset="utf-8">
-    //dapatkan semua tombol
-        let input1 = $("inpu1-r3");
-        
-        function evaluateFunction(j = 0) {
-            let stringFunction = "";
-            let k = j;
-            switch (k) {
-                case 0 :
-                    break;
-                    
-                case 1:
-                    window["showOutput1"](k);
-                    break;
-                    
-                default:
-                    break;
-            }
-            
+      </pre>
+
+      <script type="text/javascript" charset="utf-8">
+
+
+
+        // Code 1 input 1
+        let input1 = document.getElementById("input1");
+
+        input1.placeholder = input1.value;
+
+        let result1 = document.getElementById("result1");
+
+        function changeTag(myText) {
+          let newText = "";
+
+          newText = myText.replace(/</g, "&amp;lt;");
+          newText = newText.replace(/>/g, "&amp;gt;");
+          //change newline
+          newText = newText.replace(/\n/g, "<br>");
+          newText = newText.repl
+
+
+          return newText;
         }
-        
-        for (let i = 0, i < input1.length, i++) {
-            
-            input1[i].id = "input" + (1 + i);
-            
-            let output1, copyButton;
-            
-            $(input1[i]).append();
-            
-            
-            
-            
+
+        function replaceTag() {
+
+          let input1Text = input1.value;
+
+          let newText = changeTag(input1Text);
+
+          result1.innerHTML = newText;
+
         }
-        
-        
-    </script>
-    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
+
+        replaceTag();
+      </script>
+
+    </section>
+
+    <h3>test2</h3>
+    <section>
+      <input type="text" id="input2" onkeyup="replaceTag()" value="<span>text</span>" />
+
+
+      <pre id="result2">
+
+      </pre>
+
+    </section>
+
+
+  </div>
+
+</main>
+
+<script type="text/javascript" charset="utf-8">
+  //dapatkan semua tombol
+  let input1 = $("inpu1-r3");
+
+  function evaluateFunction(j = 0) {
+    let stringFunction = "";
+    let k = j;
+    switch (k) {
+      case 0:
+        break;
+
+      case 1:
+        window["showOutput1"](k);
+        break;
+
+      default:
+        break;
+    }
+
+  }
+
+  for (let i = 0, i < input1.length, i++) {
+
+    input1[i].id = "input" + (1 + i);
+
+    let output1,
+    copyButton;
+
+    $(input1[i]).append();
+
+
+
+
+  }
+
+
+</script>
+<script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
 
 </script>
 
