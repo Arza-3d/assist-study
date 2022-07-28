@@ -81,7 +81,8 @@
         
         function getLastInput() {
           lastInput = document.querySelector("input:last-of-type");
-          if (lastInput.id.length
+          lastInput.id = "input" + inputCount;
+          inputCount++;
         }
         
         function setInput() {
