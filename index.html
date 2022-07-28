@@ -13,14 +13,14 @@
         
         function getLastOfType(myHTMLTag) {
           let myLastElementNode; elementArray;
-          let elementArray = document.querySelectorAll(myH);
-          let lastInput = aLastInput[aLastInput.length - 1];
+          let elementArray = document.querySelectorAll(myHTMLTag);
+          let lastInput = elementArray[elementArray.length - 1];
           return myLastElementNode;
         }
         
         function setInputAndOutput() {
-          let aLastInput = document.querySelectorAll("textarea");
-          let lastInput = aLastInput[aLastInput.length - 1];
+          let elementArray = document.querySelectorAll("textarea");
+          let lastInput = elementArray[elementArray.length - 1];
           lastInput.id = "input" + inputCount;
           
           inputParent = lastInput.parentElement;
