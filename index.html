@@ -82,18 +82,14 @@
         function getLastInput() {
           lastInput = document.querySelector("textarea:last-of-type");
           lastInput.id = "input" + inputCount;
-          inputCount++;
           
           inputParent = lastInput.parentElement;
-          
-          let output
-          inputParent.innerHTML +=;
-          
-        }
-        
-        function setInput() {
+    
+          inputParent.innerHTML += "<pre id='output"+inputCount+"'></pre
+          inputCount++;
           
         }
+
         
       </script>
 
