@@ -8,6 +8,20 @@
   <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
 
   <title>Assist</title>
+        <script>
+        let inputCount = 0;
+        
+        function getLastInput() {
+          lastInput = document.querySelector("textarea:last-of-type");
+          lastInput.id = "input" + inputCount;
+          
+          inputParent = lastInput.parentElement;
+    
+          inputParent.innerHTML += "<pre id='output"+inputCount+"'></pre>"
+          + "<button id='button'"+inputCount+">copy</button>";
+          inputCount++;
+        }
+      </script>
 
 </head>
 <body
@@ -76,20 +90,7 @@
           result1.innerHTML = newText;
         }
       </script>
-      <script>
-        let inputCount = 0;
-        
-        function getLastInput() {
-          lastInput = document.querySelector("textarea:last-of-type");
-          lastInput.id = "input" + inputCount;
-          
-          inputParent = lastInput.parentElement;
-    
-          inputParent.innerHTML += "<pre id='output"+inputCount+"'></pre>"
-          + "<button id='button'"+inputCount+">copy</button>";
-          inputCount++;
-        }
-      </script>
+
 
     </section>
 
