@@ -11,6 +11,11 @@
         <script>
         let inputCount = 0;
         
+        function getLastOfType(myElemen) {
+          let aLastInput = document.querySelectorAll("textarea");
+          let lastInput = aLastInput[aLastInput.length - 1];
+        }
+        
         function setInputAndOutput() {
           let aLastInput = document.querySelectorAll("textarea");
           let lastInput = aLastInput[aLastInput.length - 1];
