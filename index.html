@@ -9,7 +9,7 @@
 
   <title>Assist</title>
   <script>
-    
+
     function getLastOfType(myHTMLTag) {
       let myLastElementNode,
       elementArray;
@@ -17,46 +17,46 @@
       myLastElementNode = elementArray[elementArray.length - 1];
       return myLastElementNode;
     }
-    
+
     let inputCount = 0;
     let lastInput;
-    
+
     function getInputParent() {
       return lastInput.parentElement;
     }
-    
+
     function setOutput() {
       let inputParent = getInputParent();
-      
+
       inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
     }
-    
+
     function setCopyButton() {
       let inputParent = getInputParent();
-      
+
       inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input'+inputCount +'"'+")'>copy</button>";
     }
-    
+
     function copyText(targetId) {
       let myText = document.getElementById(targetId).innerHTML;
       navigator.clipboard.writeText(myText);
     }
-   
+
     function setInputAndOutput(myFunction = null) {
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
-      
+
       if (myFunction != null) {
-          lastInput.onkeyup = myFunction;
+        lastInput.onkeyup = myFunction;
       }
 
       setOutput();
-      
+
       setCopyButton();
 
       inputCount++;
     }
-    
+
   </script>
 
 </head>
@@ -94,11 +94,7 @@
         <p>
           Konversi tag jadi &amp;gt;
         </p>
-        <textarea type="text" id="input1" onkeyup="replaceTag()" />
-      </textarea>
-
-      <pre id="result1">
-      </pre>
+        <textarea></textarea>
       <script>
         let input1 = document.getElementById("input1");
 
