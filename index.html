@@ -9,8 +9,7 @@
 
   <title>Assist</title>
   <script>
-    let inputCount = 0;
-
+    
     function getLastOfType(myHTMLTag) {
       let myLastElementNode,
       elementArray;
@@ -19,6 +18,7 @@
       return myLastElementNode;
     }
 
+    let inputCount = 0;
     function setInputAndOutput() {
       let lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
