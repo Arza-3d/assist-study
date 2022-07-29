@@ -21,7 +21,9 @@
     let inputCount = 0;
     let lastInput, inputParent;
     
-    function getInputParent
+    function getInputParent() {
+      return lastInput.parentElement;
+    }
     
     function setOutput() {
       inputParent = lastInput.parentElement;
