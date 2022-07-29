@@ -50,10 +50,10 @@
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
 
-      inputParent = lastInput.parentElement;
+      setOutput();
+      
+      setCopyButton();
 
-      inputParent.innerHTML += "<pre id='output"+inputCount+"'></pre>"
-      + "<button id='button'"+inputCount+">copy</button>";
       inputCount++;
     }
   </script>
