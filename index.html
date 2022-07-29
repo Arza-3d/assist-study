@@ -43,7 +43,7 @@
     
     function copyText(targetId) {
       let myText = document.getElementById(targetId).innerHTML;
-      
+      navigator.clipboard.writeText();
     }
    
     function setInputAndOutput() {
