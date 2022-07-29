@@ -19,8 +19,7 @@
         }
         
         function setInputAndOutput() {
-          let elementArray = document.querySelectorAll("textarea");
-          let lastInput = elementArray[elementArray.length - 1];
+          let lastInput = getLastOfType("textarea");
           lastInput.id = "input" + inputCount;
           
           inputParent = lastInput.parentElement;
