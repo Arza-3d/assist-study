@@ -19,12 +19,13 @@
     }
     
     let inputCount = 0;
+    let lastInput;
     function setOutput(myInput) {
       let inputParent = myInput.parentElement;
     }
    
     function setInputAndOutput() {
-      let lastInput = getLastOfType("textarea");
+      lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
 
       inputParent = lastInput.parentElement;
