@@ -112,7 +112,7 @@
           
           let input1 = document.getElementById("input"+ myInputCount);
           
-          let result1 = document.getElementById("result");
+          let result1 = document.getElementById("result"+ myInputCount);
 
           let input1Text = input1.value;
 
@@ -120,6 +120,8 @@
 
           result1.innerHTML = newText;
         }
+        
+        setInputAndOutput(myInputCount);
       </script>
 
 
