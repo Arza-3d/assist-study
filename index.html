@@ -107,11 +107,12 @@
           return newText;
         }
         
-        let myInputCount = inputCount;
 
-        function replaceTag() {
+        function replaceTag(myInputCount) {
           
-          let input1 =document.getElementById("input"+ myInputCount);
+          let input1 = document.getElementById("input"+ myInputCount);
+          
+          let result1 = document.getElementById("result");
 
           let input1Text = input1.value;
 
