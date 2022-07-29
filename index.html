@@ -31,8 +31,6 @@
       let inputParent = getInputParent();
       
       inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
-      
-      // set output
     }
     
     function setCopyButton() {
@@ -50,7 +48,7 @@
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
       
-      onkeyup = myFunction;
+      lastInput.onkeyup = myFunction;
 
       setOutput();
       
