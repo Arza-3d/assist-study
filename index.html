@@ -96,12 +96,6 @@
         </p>
         <textarea></textarea>
       <script>
-        let input1 = document.getElementById("input1");
-
-        input1.placeholder = input1.value;
-
-        let result1 = document.getElementById("result1");
-
         function changeTag(myText) {
           let newText = "";
 
@@ -114,12 +108,14 @@
         }
 
         function replaceTag() {
+          
+          
 
           let input1Text = input1.value;
 
           let newText = changeTag(input1Text);
 
-          result1.innerHTML = newText;
+          myResult.innerHTML = newText;
         }
       </script>
 
