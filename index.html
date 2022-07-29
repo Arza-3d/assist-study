@@ -30,7 +30,7 @@
     function setOutput() {
       let inputParent = getInputParent();
       
-      inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>"
+      inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
       
       // set output
     }
@@ -38,7 +38,7 @@
     function setCopyButton() {
       let inputParent = getInputParent();
       
-      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input"'+inputCount+")'>copy</button>"
+      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input"'+inputCount+")'>copy</button>";
     }
     
     function copyText(targetId) {
