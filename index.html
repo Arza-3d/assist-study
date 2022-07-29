@@ -49,6 +49,8 @@
     function setInputAndOutput() {
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
+      
+      onkeyup=myFunction;
 
       setOutput();
       
@@ -56,6 +58,7 @@
 
       inputCount++;
     }
+    
   </script>
 
 </head>
