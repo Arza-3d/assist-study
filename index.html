@@ -38,7 +38,7 @@
     function setCopyButton() {
       let inputParent = getInputParent();
       
-      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("")'>copy</button>"
+      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("++")'>copy</button>"
     }
     
     function copyText(targetId) {
