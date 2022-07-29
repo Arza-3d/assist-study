@@ -38,12 +38,12 @@
     function setCopyButton() {
       let inputParent = getInputParent();
       
-      inputParent.innerHTML += "<button id=button"+inputCount+">copy</button>"
+      inputParent.innerHTML += "<button id='button"+inputCount+"' >copy</button>"
     }
     
     function copyText(targetId) {
       let myText = document.getElementById(targetId).innerHTML;
-      navigator.clipboard.writeText();
+      navigator.clipboard.writeText(myText);
     }
    
     function setInputAndOutput() {
