@@ -29,8 +29,6 @@
 
     function setOutput() {
       
-      alert("ni input parent " + inputParent )
-
       inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
     }
 
@@ -40,11 +38,13 @@
     }
 
     function copyText(targetId) {
+      
       let myText = document.getElementById(targetId).innerHTML;
       navigator.clipboard.writeText(myText);
     }
 
     function setInputAndOutput(myFunction = null) {
+      
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
 
