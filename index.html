@@ -23,12 +23,13 @@
 
     function getInputParent() {
       
-      alert(inputParent);
       return lastInput.parentElement;
     }
 
     function setOutput() {
       let inputParent = getInputParent();
+      
+      alert("ni input parent " + inputParent )
 
       inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
     }
