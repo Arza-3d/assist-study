@@ -49,9 +49,12 @@
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
       
-    
+      if (myFunction != null) {
+        lastInput.addEventListener("keyup", myFunction);
       
-      lastInput.addEventListener("keyup", myFunction);
+      }
+      
+      
       //if (myFunction.length > 0) {
         //lastInput.onkeyup = myFunction;
       //}
