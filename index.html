@@ -20,6 +20,7 @@
 
     let inputCount = 0;
     let lastInput;
+    let inputParent;
 
     function getInputParent() {
       
@@ -27,7 +28,7 @@
     }
 
     function setOutput() {
-      let inputParent = getInputParent();
+      //let inputParent = getInputParent();
       
       alert("ni input parent " + inputParent )
 
@@ -35,7 +36,7 @@
     }
 
     function setCopyButton() {
-      let inputParent = getInputParent();
+      //let inputParent = getInputParent();
 
       inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input'+inputCount +'"'+")'>copy</button>";
     }
@@ -52,7 +53,9 @@
       if (myFunction != null) {
         lastInput.onkeyup = myFunction;
       }
-
+      
+      inputParent = getInputParent
+      
       setOutput();
 
       setCopyButton();
