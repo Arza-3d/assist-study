@@ -48,9 +48,10 @@
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
-
+      
+      lastInput.addEventListener("keyup", myFunction);
       //if (myFunction.length > 0) {
-        lastInput.onkeyup = myFunction;
+        //lastInput.onkeyup = myFunction;
       //}
       
       inputParent = getInputParent();
