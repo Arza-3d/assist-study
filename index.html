@@ -43,11 +43,13 @@
       navigator.clipboard.writeText(myText);
     }
 
-    function setInputAndOutput(myFunction = "") {
+    function setInputAndOutput(myFunction) {
       
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
+      
+    
       
       lastInput.addEventListener("keyup", myFunction);
       //if (myFunction.length > 0) {
