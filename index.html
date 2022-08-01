@@ -49,7 +49,7 @@
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
       
-      alert(myFunction);
+      //alert(myFunction);
       if (myFunction != undefined) {
         lastInput.addEventListener("keyup", myFunction);
       }
@@ -61,6 +61,8 @@
       setCopyButton();
 
       inputCount++;
+      
+      alert(lastInput.onclick);
     }
 
   </script>
