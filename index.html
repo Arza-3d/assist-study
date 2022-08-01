@@ -112,9 +112,11 @@
           return newText;
         }
         
-        function replaceTag(myInputCount) {
+        function replaceTag() {
           
-          let input1 = //document.getElementById("input"+ myInputCount);
+          myInputCount = this.dataset.count;
+          
+          let input1 = document.getElementById("input"+ myInputCount);
           
           let result1 = document.getElementById("result"+ myInputCount);
 
@@ -123,10 +125,6 @@
           let newText = changeTag(input1Text);
 
           result1.innerHTML = newText;
-        }
-        
-        function testF() {
-          alert("tes");
         }
         
         setInputAndOutput(testF);
