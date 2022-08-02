@@ -145,7 +145,8 @@
     for (let i = 0; i < $input.length; i++) {
       $input[i].id = "input" + 1;
       $input[i].dataset.count = 1;
-      $[$input[i]].after();
+      $[$input[i]].after(
+        "<pre id=''");
     }
     
     $input.after("<pre>").after("<button>");
