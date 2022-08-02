@@ -28,14 +28,14 @@
       return lastInput.parentElement;
     }
 
-    function setOutput() {
+    function setOutput(myCount) {
       
-      inputParent.innerHTML += "<pre id = 'output"+ inputCount +"'>...</pre>";
+      inputParent.innerHTML += "<pre id = 'output"+ myCount +"'>...</pre>";
     }
 
     function setCopyButton() {
 
-      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input'+inputCount +'"'+")' data-count="+inputCount+">copy</button>";
+      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input'+inputCount +'"'+")' data-count="+myCount+">copy</button>";
     }
 
     function copyText(targetId) {
