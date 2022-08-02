@@ -33,9 +33,9 @@
       inputParent.innerHTML += "<pre id = 'output"+ myCount +"'>...</pre>";
     }
 
-    function setCopyButton() {
+    function setCopyButton(myCount) {
 
-      inputParent.innerHTML += "<button id='button"+inputCount+"' onclick='copyText("+'"input'+inputCount +'"'+")' data-count="+myCount+">copy</button>";
+      inputParent.innerHTML += "<button id='button"+myCount+"' onclick='copyText("+'"input'+myCount +'"'+")' data-count="+myCount+">copy</button>";
     }
 
     function copyText(targetId) {
