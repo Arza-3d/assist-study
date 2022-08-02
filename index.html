@@ -44,17 +44,11 @@
       navigator.clipboard.writeText(myText);
     }
 
-    function setInputAndOutput(myFunction) {
+    function setInputAndOutput() {
       
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
-      
-      //alert(myFunction);
-      if (myFunction != undefined) {
-        lastInput.addEventListener("input", myFunction);
-        alert("addEventListenerna adals " + myFunction);
-      }
       
       inputParent = getInputParent();
       
@@ -66,11 +60,7 @@
       
       
       //alert(lastInput);
-      alert("fungsinya "+lastInput.oninput)
-      
-      //myFunction();
-  
-      
+      alert("fungsinya "+lastInpu
       
     }
 
