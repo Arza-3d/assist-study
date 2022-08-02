@@ -142,8 +142,9 @@
   <script>
     $input = $("textarea");
     
-    for (let i = 0; i < $inputContainer.length; i++) {
-      $inputContainer.append
+    for (let i = 0; i < $input.length; i++) {
+      $input[i].id = "input" + 1;
+      $input[i].dataset.count = 1;
     }
 
   </script>
