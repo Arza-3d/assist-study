@@ -23,12 +23,11 @@
     let inputParent;
 
     /*function getInputParent() {
-      
       return lastInput.parentElement;
     }*/
 
     function setOutput(myCount) {
-      
+
       inputParent.innerHTML += "<pre id = 'output"+ myCount +"'>...</pre>";
     }
 
@@ -38,25 +37,21 @@
     }
 
     function copyText(targetId) {
-      
+
       let myText = document.getElementById(targetId).innerHTML;
       navigator.clipboard.writeText(myText);
     }
 
     /*function setInputAndOutput() {
-      
       lastInput = getLastOfType("textarea");
       lastInput.id = "input" + inputCount;
       lastInput.dataset.count = inputCount;
-      
       inputParent = getInputParent();
-      
       setOutput();
 
       setCopyButton();
 
       inputCount++;
-      
     }*/
 
   </script>
@@ -97,58 +92,58 @@
           Konversi tag jadi &amp;gt;
         </p>
         <textarea></textarea>
-      <script>
-        function changeTag(myText) {
-          let newText = "";
+        <script>
+          function changeTag(myText) {
+            let newText = "";
 
-          newText = myText.replace(/</g, "&amp;lt;");
-          newText = newText.replace(/>/g, "&amp;gt;");
-          newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
-          newText = newText.replace(/ /g, "&amp;nbsp;");
+            newText = myText.replace(/</g, "&amp;lt;");
+            newText = newText.replace(/>/g, "&amp;gt;");
+            newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
+            newText = newText.replace(/ /g, "&amp;nbsp;");
 
-          return newText;
-        }
-        
-        function replaceTag() {
-          
-          myInputCount = this.dataset.count;
-          
-          let input1 = document.getElementById("input"+ myInputCount);
-          
-          let result1 = document.getElementById("result"+ myInputCount);
+            return newText;
+          }
 
-          let input1Text = input1.value;
+          function replaceTag() {
 
-          let newText = changeTag(input1Text);
+            myInputCount = this.dataset.count;
 
-          result1.innerHTML = newText;
-        }
-        /*
+            let input1 = document.getElementById("input"+ myInputCount);
+
+            let result1 = document.getElementById("result"+ myInputCount);
+
+            let input1Text = input1.value;
+
+            let newText = changeTag(input1Text);
+
+            result1.innerHTML = newText;
+          }
+          /*
         function tess2() {
-          
         }
-        
         setInputAndOutput(tess2);
         */
-      </script>
-    </section>
+        </script>
+      </section>
 
-    <h3>test2</h3>
-    <section>
-      <textarea></textarea>
-      <script>
-       // setInputAndOutput();
-      </script>
-    </section>
+      <h3>test2</h3>
+      <section>
+        <textarea></textarea>
+        <script>
+          // setInputAndOutput();
+        </script>
+      </section>
 
-  </div>
+    </div>
 
-</main>
+  </main>
 
-<script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
-<script>
-$("textarea").parent().append("<h1>tes</h1>");
-  
-</script>
+  <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
+  <script>
+    $inputContainer = $("textarea").parent();
+    
+    for () 
+
+  </script>
 </body>
 </html>
