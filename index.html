@@ -52,8 +52,8 @@
       
       //alert(myFunction);
       if (myFunction != undefined) {
-        lastInput.addEventListener("keyup", myFunction);
-        alert("addEventListener " + myFunction);
+        lastInput.addEventListener("input", myFunction);
+        alert("addEventListenerna adals " + myFunction);
       }
       
       inputParent = getInputParent();
@@ -66,7 +66,7 @@
       
       
       //alert(lastInput);
-      alert("fungsinya "+lastInput.onkeyup)
+      alert("fungsinya "+lastInput.oninput)
       
       //myFunction();
       
