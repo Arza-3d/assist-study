@@ -112,7 +112,14 @@
         </button><br>`);
     }
     
-    $button = $("button");
+    $buttons = $("button");
+    for (let i = 0; i < buttons.length; i++) {
+      document.getElementById("copy"+ i).addEventListener("click", tesFunc);
+    }
+    
+    function tesFunc() {
+      alert(this.id)
+    }
   </script>
   
 </body>
