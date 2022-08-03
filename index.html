@@ -149,8 +149,9 @@
         "<pre id='output"+i+"' data-count='"+i+"'> "+ i +" </pre>")
         .after(`
         <button 
-        id="copy"
-        >
+        id="copy"` + i +
+        `data-count=` +
+        `>
         copy
         </button>`);
       
