@@ -26,15 +26,7 @@
       return lastInput.parentElement;
     }*/
 
-    function setOutput(myCount) {
-
-      inputParent.innerHTML += "<pre id = 'output"+ myCount +"'>...</pre>";
-    }
-
-    function setCopyButton(myCount) {
-
-      inputParent.innerHTML += "<button id='button"+myCount+"' onclick='copyText("+'"input'+myCount +'"'+")' data-count="+myCount+">copy</button>";
-    }
+    
 
     function copyText() {
       let myCount = this.dataset.count;
@@ -136,10 +128,6 @@
         copy
         </button><br>`);
     }
-    
-    //$input.after("<pre>").after("<button>");
-    
-
   </script>
 </body>
 </html>
