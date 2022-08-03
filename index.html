@@ -147,7 +147,12 @@
       $input[i].dataset.count = i;
       $($input[i]).after(
         "<pre id='output"+i+"' data-count='"+i+"'> "+ i +" </pre>")
-        .after('<button>copy</button>');
+        .after(`
+        <button 
+        id="copy"
+        >
+        copy
+        </button>`);
       
     }
     
