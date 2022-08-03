@@ -143,9 +143,9 @@
     $input = $("textarea");
     
     for (let i = 0; i < $input.length; i++) {
-      $input[i].id = "input" + 1;
-      $input[i].dataset.count = 1;
-      $[$input[i]].after(
+      $input[i].id = "input" + i;
+      $input[i].dataset.count = i;
+      $($input[i]).after(
         "<pre id='output"+i+"'>...</pre>");
     }
     
