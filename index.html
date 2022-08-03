@@ -10,24 +10,6 @@
   <title>Assist</title>
   <script>
 
-    function getLastOfType(myHTMLTag) {
-      let myLastElementNode,
-      elementArray;
-      elementArray = document.querySelectorAll(myHTMLTag);
-      myLastElementNode = elementArray[elementArray.length - 1];
-      return myLastElementNode;
-    }
-
-    let inputCount = 0;
-    let lastInput;
-    let inputParent;
-
-    /*function getInputParent() {
-      return lastInput.parentElement;
-    }*/
-
-    
-
     function copyText() {
       let myCount = this.dataset.count;
       let myText = document.getElementById("output"+ myCount +).innerHTML;
