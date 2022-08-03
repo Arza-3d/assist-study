@@ -36,9 +36,9 @@
       inputParent.innerHTML += "<button id='button"+myCount+"' onclick='copyText("+'"input'+myCount +'"'+")' data-count="+myCount+">copy</button>";
     }
 
-    function copyText(targetId) {
-      let myCount = this.dataset.count
-      let myText = document.getElementById(targetId).innerHTML;
+    function copyText() {
+      let myCount = this.dataset.count;
+      let myText = document.getElementById("output"+ myCount +).innerHTML;
       navigator.clipboard.writeText(myText);
     }
 
