@@ -37,22 +37,10 @@
     }
 
     function copyText(targetId) {
-
+      let myCount = this.dataset.count
       let myText = document.getElementById(targetId).innerHTML;
       navigator.clipboard.writeText(myText);
     }
-
-    /*function setInputAndOutput() {
-      lastInput = getLastOfType("textarea");
-      lastInput.id = "input" + inputCount;
-      lastInput.dataset.count = inputCount;
-      inputParent = getInputParent();
-      setOutput();
-
-      setCopyButton();
-
-      inputCount++;
-    }*/
 
   </script>
 
