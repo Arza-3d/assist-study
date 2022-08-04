@@ -130,7 +130,8 @@
     
     for (let i = 0; i < $input; i++)
     {
-      document.getElementById("input" + i).addEventListener("keyup", inputFunctions[i]);
+      let myInput = document.getElementById("input" + i);
+      myInput.addEventListener("keyup", inputFunctions[i]);
     }
   </script>
   
