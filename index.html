@@ -131,6 +131,8 @@
     for (let i = 0; i < $input.length; i++)
     {
       let myInput = document.getElementById("input" + i);
+      
+      if (inputFunctions[i] != null)
       myInput.addEventListener("keyup", inputFunctions[i]);
     }
   </script>
