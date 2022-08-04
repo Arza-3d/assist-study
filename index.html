@@ -115,12 +115,9 @@
     let $buttons = $("button");
     for (let i = 0; i < $buttons.length; i++) {
       let button = document.getElementById("copy" + i);
-      button.addEventListener("click", tesFunc);
+      button.addEventListener("click", copyText);
     }
     
-    function tesFunc() {
-      alert(this.id)
-    }
   </script>
   
 </body>
