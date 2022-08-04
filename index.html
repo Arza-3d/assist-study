@@ -100,7 +100,7 @@
 
   <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
   <script>
-    $input = $("textarea");
+    let $input = $("textarea");
     
     for (let i = 0; i < $input.length; i++) {
       $input[i].id = "input" + i;
@@ -128,7 +128,6 @@
       empF
       ];
     
-    let $input = $("textarea");
     for (let i = 0; i < $input; i++)
     {
       document.getElementById("input" + i).addEventListener("keyup", inputFunctions[i]);
