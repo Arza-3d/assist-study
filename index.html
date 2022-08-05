@@ -12,12 +12,12 @@
 
     function copyText() {
       let myCount = this.dataset.count;
-      let myInput = let myText = document.getElementById("input"+ myCount);
+      let myInput = document.getElementById("input"+ myCount);
       let myText = myInput.value;
       
       // for mobile
       myInput.select();
-      myInput.setSelectionRange(0, 9999);
+      myInput.setSelectionRange(0, 99999);
       
       // for PC
       navigator.clipboard.writeText(myText);
