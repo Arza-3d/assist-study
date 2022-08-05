@@ -70,7 +70,7 @@
           function changeBackTag(myText) {
             let newText = "";
 
-            newText = myText.replace(/</g, "&amp;lt;");
+            newText = myText.replace(/&amp;lt;/g, "<");
             newText = newText.replace(/>/g, "&amp;gt;");
             newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
             newText = newText.replace(/ /g, "&amp;nbsp;");
