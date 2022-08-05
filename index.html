@@ -12,7 +12,7 @@
 
     function copyText() {
       let myCount = this.dataset.count;
-      let myText = document.getElementById("input"+ myCount).value;//innerHTML;
+      let myText = document.getElementById("input"+ myCount).value;
       navigator.clipboard.writeText(myText);
       alert(myText);
     }
