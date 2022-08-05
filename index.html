@@ -16,8 +16,8 @@
       let myText = myInput.value;
       
       // for mobile
-      myInput.select();
-      myInput.setSelectionRange(0, 99999);
+      myText.select();
+      myText.setSelectionRange(0, 99999);
       
       // for PC
       navigator.clipboard.writeText(myText);
