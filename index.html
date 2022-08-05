@@ -12,10 +12,9 @@
 
     function copyText() {
       let myCount = this.dataset.count;
-      let myText = document.getElementById("output"+ myCount).innerHTML;
+      let myText = document.getElementById("input"+ myCount).innerHTML;
       navigator.clipboard.writeText(myText);
-      alert(changeBackTag(myText));
-      
+      alert(myText);
     }
 
   </script>
