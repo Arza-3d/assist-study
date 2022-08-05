@@ -72,7 +72,7 @@
             let newText = "";
 
             newText = myText.replace(/&amp;/g, "&");
-            newText = myText.replace(/&lt;/g, ">");
+            newText = myText.replace(/&lt;/g, "<");
             newText = newText.replace(/&gt;/g, ">");
             newText = newText.replace(/<br>&lt;br&gt;/g, "\n");
             newText = newText.replace(/&nbsp;/g, " ");
