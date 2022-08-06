@@ -19,6 +19,7 @@
       myInput.select();
       //alert(myInput.select())
       myInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
       
       // for PC
       navigator.clipboard.writeText(myInput.value);
