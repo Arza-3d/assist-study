@@ -13,11 +13,9 @@
     function copyText() {
       let myCount = this.dataset.count;
       let myInput = document.getElementById("input"+ myCount);
-      //let myText = myInput.value;
       
       // for mobile
       myInput.select();
-      //alert(myInput.select())
       myInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
       
