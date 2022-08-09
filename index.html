@@ -33,17 +33,13 @@
     }
 
 
-    function copyText() {
-      let myInput = getInput();
+    function copyText() 
 
       // for mobile
-      copyElemForMobile();
-      myInput.select();
-      myInput.setSelectionRange(0, 99999);
-      document.execCommand("copy");
+      copyElemForMobile(getInput());
 
       // for PC
-      navigator.clipboard.writeText(myInput.value);
+      navigator.clipboard.writeText(getInputValue());
     }
   </script>
 
