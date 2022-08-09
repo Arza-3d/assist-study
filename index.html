@@ -12,7 +12,10 @@
 
     function getCount() {
       //alert(typeOf this);
-      if (this.dataset.count == undefined) {retu} else {
+      if (this.dataset.count == undefined) {
+        return 0;
+        
+      } else {
       return this.dataset.count;
       }
     }
