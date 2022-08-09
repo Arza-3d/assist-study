@@ -9,46 +9,43 @@
 
   <title>Assist</title>
   <script>
-  
-  function getCount() {
-    return this.dataset.count;
-  }
-  
-  function getInput() {
-    return document.getElementByID("input" + getCount());
-  }
-  
-  
-  
-    function getInputText(myCount2) {
-      if (myCount2 == undefined) {
-        myCount2 = this.dataset.count;
-      }
-      //let myCount
+
+    function getCount() {
+      return this.dataset.count;
     }
-  
+
+    function getInput() {
+      return document.getElementByID("input" + getCount());
+    }
+
+
+
+    function getInputValue() {
+
+    }
+
     function getFunction(myFunction) {
       let myCount = this.dataset.count;
       let inputText = document.getElementById("");
       inputFunctions[myCount]();
     }
-  
+
     function copyText() {
       //let myCount = this.dataset.count;
       let myInput = getInput();
-      
+
       // for mobile
       myInput.select();
       myInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
-      
+
       // for PC
       navigator.clipboard.writeText(myInput.value);
     }
   </script>
-  
 
-  
+
+
 
 </head>
 <body
@@ -112,11 +109,11 @@
 
             result1.innerHTML = newText;
           }
-          
+
           function empF () {
             alert("empty func");
           }
-          
+
         </script>
       </section>
 
@@ -124,7 +121,7 @@
       <section>
         <textarea></textarea>
       </section>
-      
+
       <h3>test 3</h3>
       <section>
         <textarea></textarea>
@@ -137,62 +134,61 @@
   <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
   <script>
     let $input = $("textarea");
-    
+
     for (let i = 0; i < $input.length; i++) {
       $input[i].id = "input" + i;
       $input[i].dataset.count = i;
       $($input[i]).after(
         "<pre id='output"+i+"' data-count='"+i+"'> ini output ke "+ i +" </pre>")
-        .after(`<br>
-        <button 
+      .after(`<br>
+        <button
         id="copy` + i +
         `" data-count=` + i +
         `>
         copy
         </button><br>`);
-        
-        //  create saved input container
-        $($input[i]).after('<pre id="realOutput" style="display:none"></pre>');
+
+      //  create saved input container
+      $($input[i]).after('<pre id="realOutput" style="display:none"></pre>');
     }
-    
+
     let $buttons = $("button");
     for (let i = 0; i < $buttons.length; i++) {
       let button = document.getElementById("copy" + i);
       button.addEventListener("click", copyText);
     }
-    
+
     const inputFunctions =
     [
       replaceTag,
       empF
-      ];
-    
-    for (let i = 0; i < $input.length; i++)
-    {
+    ];
+
+    for (let i = 0; i < $input.length; i++) {
       let myInput = document.getElementById("input" + i);
-      
+
       if (inputFunctions[i] != null)
-      myInput.addEventListener("keyup", inputFunctions[i]);
+        myInput.addEventListener("keyup", inputFunctions[i]);
     }
   </script>
-  
+
   <script type="text/javascript" charset="utf-8">
-    
+
     function inputIn(functionParam) {
-      
+
       let myCount = this.dataset.count;
-      
-      
+
+
       // save input function output
-      
+
       // display function output
     }
-    
+
     function copyButton() {
       // copy display function output to clipboard/
     }
-    
+
   </script>
-  
+
 </body>
 </html>
