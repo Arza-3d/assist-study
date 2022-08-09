@@ -10,11 +10,15 @@
   <title>Assist</title>
   <script>
   
+  function getCount() {
+    return this.dataset.count;
+  }
+  
     function getInputText(myCount2) {
       if (myCount2 == undefined) {
-        myCount2 = this.dataset
+        myCount2 = this.dataset.count;
       }
-      let myCount
+      //let myCount
     }
   
     function getFunction(myFunction) {
