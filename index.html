@@ -26,8 +26,10 @@
       return document.getElementById("output" + getCount());
     }
     
-    function copyElemForMobile() {
-      
+    function copyElemForMobile(myElem) {
+      myElem.select();
+      myElem.setSelectionRange(0, 99999);
+      document.execCommand("copy");
     }
 
 
@@ -35,6 +37,7 @@
       let myInput = getInput();
 
       // for mobile
+      copyElemForMobile();
       myInput.select();
       myInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
