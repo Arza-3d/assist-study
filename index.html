@@ -117,10 +117,10 @@
       <section>
         <textarea></textarea>
         
-        <h1 data-count="5" id="tesH1">get count</h1>
+        <h1 data-count="5" id="tesH1" onclick="getCount()">get count</h1>
         <script type="text/javascript" charset="utf-8">
           let tesH1 = document.getElementById("tesH1");
-          //tesH1.addEventListener("click", getCount);
+          tesH1.addEventListener("click", getCount);
         </script>
       </section>
 
