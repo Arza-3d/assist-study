@@ -11,7 +11,7 @@
   <script>
 
     function getCount(thisElem) {
-      return this.tagName == undefined ? thisElem.dataset.count : this.dataset.count;
+      return this.tagName == undefined ? alert(thisElem.dataset.count) : alert(this.dataset.count);
     }
 
     function getInput() {
