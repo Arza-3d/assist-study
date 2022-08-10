@@ -22,8 +22,8 @@
       return getInput(thisElem).value;
     }
     
-    function getOutput() {
-      return document.getElementById("output" + getCount());
+    function getOutput(thisElem) {
+      return document.getElementById("output" + getCount(thisElem));
     }
     
     //function setOut
