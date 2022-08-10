@@ -14,12 +14,12 @@
       return thisElem.dataset.count;
     }
 
-    function getInput() {
-      return document.getElementById("input" + getCount());
+    function getInput(thisElem) {
+      return document.getElementById("input" + getCount(thisElem));
     }
 
-    function getInputValue() {
-      return getInput().value;
+    function getInputValue(thisElem) {
+      return getInput(thisElem).value;
     }
     
     function getOutput() {
