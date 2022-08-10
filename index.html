@@ -10,11 +10,8 @@
   <title>Assist</title>
   <script>
 
-    function getCount() {
-      alert(this.tagName);
-      //alert(this.dataset.count);
-      //if (this.)
-      return this.dataset.count;
+    function getCount(thisElem) {
+      return thisElem.dataset.count;
     }
 
     function getInput() {
