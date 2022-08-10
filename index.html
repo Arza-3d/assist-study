@@ -36,9 +36,9 @@
 
 
     function copyText() {
-
+      let thisElem = this;
       // for mobile
-      copyElemForMobile(getInput(thisEl));
+      copyElemForMobile(getInput(this));
 
       // for PC
       navigator.clipboard.writeText(getInputValue());
