@@ -28,9 +28,9 @@
     
     //function setOut
     
-    function copyElemForMobile(myElem) {
-      myElem.select();
-      myElem.setSelectionRange(0, 99999);
+    function copyElemForMobile(thisElem) {
+      thisElem.select();
+      thisElem.setSelectionRange(0, 99999);
       document.execCommand("copy");
     }
 
@@ -38,7 +38,7 @@
     function copyText() {
 
       // for mobile
-      copyElemForMobile(getInput());
+      copyElemForMobile(getInput(thisEl));
 
       // for PC
       navigator.clipboard.writeText(getInputValue());
