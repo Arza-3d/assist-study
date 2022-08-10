@@ -40,7 +40,10 @@
       let myCount = this.dataset.count;
       let myInput = getInput(myCount);
       // for mobile
-      copyElemForMobile(getInput(myCount));
+      //copyElemForMobile(getInput(myCount));
+      myInput.select();
+      myInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
       
       alert(getInputValue(myCount));
 
