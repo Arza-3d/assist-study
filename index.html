@@ -36,11 +36,13 @@
 
 
     function copyText() {
+      
+      let myCount = this.dataset.count;
       // for mobile
-      copyElemForMobile(getInput(this));
+      copyElemForMobile(getInput(myCount));
 
       // for PC
-      navigator.clipboard.writeText(getInputValue(this));
+      navigator.clipboard.writeText(getInputValue(myCount));
     }
   </script>
 
