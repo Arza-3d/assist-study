@@ -34,15 +34,15 @@
       let myCount = this.dataset.count;
       let myInput = getInput(myCount);
       // for mobile
-      //copyElemForMobile(getInput(myCount));
-      //myInput.select();
-      //myInput.setSelectionRange(0, 99999);
-      //document.execCommand("copy");
+      copyElemForMobile(getInput(myCount));
+      myInput.select();
+      myInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
       
       alert(getInputValue(myCount));
 
       // for PC
-        navigator.clipboard.writeText(getInputValue(myCount));
+        //navigator.clipboard.writeText(getInputValue(myCount));
     }
   </script>
 
