@@ -189,7 +189,9 @@
 
       let myCount = this.dataset.count;
 
-      let newText = getInputValue(myCount)
+      let inputText = getInputValue(myCount);
+      
+      let newText = inputFunctions[myCount]();
       // save input function output
 
       // display function output
