@@ -17,11 +17,11 @@
     function getInputValue(myCount) {
       return getInput(myCount).value;
     }
-    
+
     function getOutput(myCount) {
       return document.getElementById("output" + myCount);
     }
-    
+
     function copyElemForMobile(thisElem) {
       thisElem.select();
       thisElem.setSelectionRange(0, 99999);
@@ -30,7 +30,7 @@
 
 
     function copyText() {
-      
+
       let myCount = this.dataset.count;
       let myInput = getInput(myCount);
       // for mobile
@@ -38,11 +38,11 @@
       myInput.select();
       myInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
-      
+
       alert(getInputValue(myCount));
 
       // for PC
-        //navigator.clipboard.writeText(getInputValue(myCount));
+      //navigator.clipboard.writeText(getInputValue(myCount));
     }
   </script>
 
@@ -118,7 +118,7 @@
       <h3>test 3</h3>
       <section>
         <textarea></textarea>
-        
+
         <h1 data-count="5" id="tesH1">get count</h1>
         <script type="text/javascript" charset="utf-8">
           let tesH1 = document.getElementById("tesH1");
