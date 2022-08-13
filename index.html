@@ -113,6 +113,8 @@
       for (let i = 0; i < wordChange.length; i++) {
         let myOldWord = new RegExp(wordChange[i][0], 'g');
         let myNewWord = '&' + wordChange[i][1] + ';';
+        
+        newText = myText.replace(myOldWord, myNewWord)
       }
       
       /*
