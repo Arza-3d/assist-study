@@ -99,6 +99,17 @@
 
       return newText;
     }
+    
+    function changeTagForDisplay(myText) {
+      let newText = "";
+
+      newText = myText.replace(/</g, "&amp;lt;");
+      newText = newText.replace(/>/g, "&amp;gt;");
+      newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
+      newText = newText.replace(/ /g, "&amp;nbsp;");
+
+      return newText;
+    }
 
   </script>
 
