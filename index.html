@@ -74,16 +74,18 @@
 
       let newText = inputFunctions[myCount](inputText);
 
+      // save input function output
       setRealOutput(myCount, newText);
 
+       // display function output
       let displayedText = changeTagForDisplay(newText);
       
-      getOutput(myCount).innerHTML = 
+      getOutput(myCount).innerHTML = displayedText;
 
 
-      // save input function output
+      
 
-      // display function output
+     
     }
   </script>
   
