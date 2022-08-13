@@ -102,17 +102,17 @@
     
     function changeTagForDisplay(myText) {
       const wordChange = [
-        ['<', '&lt;'],
-        ['>', '&gt;'],
-        ['&', '&amp;'],
-        [' ', '&nbsp;']
+        ['<', 'lt;'],
+        ['>', 'gt'],
+        ['&', 'amp'],
+        [' ', 'nbsp']
         ];
       
       let newText = '';
       
       for (let i = 0; i < wordChange.length; i++) {
         let myOldWord = new RegExp(wordChange[i][0], 'g');
-        let myNewWord = '&' + wordChange
+        let myNewWord = '&' + wordChange[i][1] + ';';
       }
       
       /*
