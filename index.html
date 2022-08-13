@@ -60,7 +60,7 @@
       myInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
 
-      alert(getInputValue(myCount));
+      //alert(getInputValue(myCount));
 
       // for PC
       //navigator.clipboard.writeText(getInputValue(myCount));
@@ -76,7 +76,7 @@
      
      let newText = inputFunctions[myCount](inputText);
       
-      alert(inputText + newText);
+      //alert(inputText + newText);
 
       // save input function output
       /*setRealOutput(myCount, newText);
@@ -128,7 +128,7 @@
       newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
       newText = newText.replace(/ /g, "&amp;nbsp;");
       */
-
+      alert(newText);
       return newText;
     }
 
