@@ -65,6 +65,24 @@
       // for PC
       //navigator.clipboard.writeText(getInputValue(myCount));
     }
+    
+    function inputIn() {
+
+      let myCount = this.dataset.count;
+
+      let inputText = getInputValue(myCount);
+
+      let newText = inputFunctions[myCount](inputText);
+
+      setRealOutput(myCount, newText);
+
+      let displayedText = replaceTag(newText);
+
+
+      // save input function output
+
+      // display function output
+    }
   </script>
   
   <script>
@@ -206,23 +224,7 @@
 
   <script>
 
-    function inputIn() {
-
-      let myCount = this.dataset.count;
-
-      let inputText = getInputValue(myCount);
-
-      let newText = inputFunctions[myCount](inputText);
-
-      setRealOutput(myCount, newText);
-
-      let displayedText = replaceTag(newText);
-
-
-      // save input function output
-
-      // display function output
-    }
+    
 
   </script>
 
