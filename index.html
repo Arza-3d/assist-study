@@ -9,8 +9,8 @@
 
   <title>Assist</title>
   <script>
-  
-  // Global Function
+
+    // Global Function
 
     function getInput(myCount) {
       return document.getElementById("input" + myCount);
@@ -23,15 +23,15 @@
     function getOutput(myCount) {
       return document.getElementById("output" + myCount);
     }
-    
+
     function getRealOutput(myCount) {
       return document.getElementById("realOutput" + myCount);
     }
-    
+
     function getRealOutputValue(myCount) {
       return getRealOutput(myCount).value;
     }
-    
+
     function setRealOutput(myCount, newText) {
       getRealOutput().value = newText;
     }
@@ -58,6 +58,37 @@
       // for PC
       //navigator.clipboard.writeText(getInputValue(myCount));
     }
+  </script>
+
+  <script>
+    function changeTag(myText) {
+      let newText = "";
+
+      newText = myText.replace(/</g, "&amp;lt;");
+      newText = newText.replace(/>/g, "&amp;gt;");
+      newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
+      newText = newText.replace(/ /g, "&amp;nbsp;");
+
+      return newText;
+    }
+
+    function replaceTag() {
+      let myCount = this.dataset.count;
+
+      getOutput(myCount).innerHTML = changeTag(getInputValue(myCount));
+    }
+
+    function empF () {
+      alert("empty func");
+    }
+
+    const inputFunctions =
+    [
+      replaceTag,
+      empF
+    ];
+
+
   </script>
 
 
@@ -99,29 +130,7 @@
           Konversi tag jadi &amp;gt;
         </p>
         <textarea></textarea>
-        <script>
-          function changeTag(myText) {
-            let newText = "";
 
-            newText = myText.replace(/</g, "&amp;lt;");
-            newText = newText.replace(/>/g, "&amp;gt;");
-            newText = newText.replace(/\n/g, "<br>&lt;br&gt;");
-            newText = newText.replace(/ /g, "&amp;nbsp;");
-
-            return newText;
-          }
-
-          function replaceTag() {
-            let myCount = this.dataset.count;
-
-            getOutput(myCount).innerHTML = changeTag(getInputValue(myCount));
-          }
-
-          function empF () {
-            alert("empty func");
-          }
-
-        </script>
       </section>
 
       <h3>test2</h3>
@@ -171,11 +180,6 @@
       button.addEventListener("click", copyText);
     }
 
-    const inputFunctions =
-    [
-      replaceTag,
-      empF
-    ];
 
     for (let i = 0; i < $input.length; i++) {
       let myInput = document.getElementById("input" + i);
@@ -185,21 +189,21 @@
     }
   </script>
 
-  <script type="tex>
+  <script>
 
     function inputIn() {
 
       let myCount = this.dataset.count;
 
       let inputText = getInputValue(myCount);
-      
+
       let newText = inputFunctions[myCount](inputText);
-      
+
       setRealOutput(myCount, newText);
-      
+
       let displayedText = replaceTag(newText);
-      
-      
+
+
       // save input function output
 
       // display function output
