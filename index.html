@@ -35,7 +35,7 @@
     }
 
     function setRealOutput(myCount, newText) {
-      getRealOutput().value = newText;
+      getRealOutput(myCount).value = newText;
     }
   </script>
   
@@ -76,7 +76,7 @@
       
       //alert(inputText + newText
       
-      alert(getInput());
+      alert(getRealOutput(myCount));
 
       // save input function output
       setRealOutput(myCount, newText);
