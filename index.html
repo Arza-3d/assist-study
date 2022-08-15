@@ -197,6 +197,10 @@
 
       //  create saved input container
       $($input[i]).after('<textarea id="realOutput'+i+'" style="display:none" data-count="'+i+'"></textarea>');
+      
+      let button = document.getElementById("copy" + i);
+      button.addEventListener("click", copyText);
+      
     }
 
     let $buttons = $("button");
@@ -208,7 +212,6 @@
 
     for (let i = 0; i < $input.length; i++) {
       let myInput = document.getElementById("input" + i);
-
         myInput.addEventListener("keyup", inputIn);
     }
   </script>
