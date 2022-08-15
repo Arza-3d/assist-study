@@ -53,7 +53,7 @@
     function copyText() {
 
       let myCount = this.dataset.count;
-      let myInput = getInput(myCount);
+      let myInput = getRealOutputValue(myCount);
       // for mobile
       copyElemForMobile(getInput(myCount));
       myInput.select();
