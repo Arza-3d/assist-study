@@ -125,15 +125,15 @@
     
     function makeTable(myText) {
       const myArray = myText.split('\n');
-      let myTable = '<table>';
-      let myTbody = '<tbody>';
+      let myTable = '<table>\n';
+      let myTbody = '<tbody>\n';
       for (let i = 0; i < myArray.length; i++) {
         const myArray2 = myArray[i].split(',');
         
-        myTbody += '<tr>';
+        myTbody += '<tr>\n';
         
         for (let j = 0; j < myArray2.length; j++) {
-          myTbody += '<td>' + myArray2[j] + '</td>'
+          myTbody += '<td>\n' + myArray2[j] + '</td>'
           
         }
         
