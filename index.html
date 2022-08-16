@@ -54,11 +54,11 @@
     function copyText() {
 
       let myCount = this.dataset.count;
-      let myInput = getRealOutput(myCount);
+      let myRealInput = getRealOutput(myCount);
       // for mobile
       //copyElemForMobile(getInput(myCount));
-      myInput.select();
-      myInput.setSelectionRange(0, 99999);
+      myRealInput.select();
+      myRealInput.setSelectionRange(0, 99999);
       document.execCommand("copy");
       
 
