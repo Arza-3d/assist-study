@@ -239,7 +239,7 @@
         </button><br>`);
 
       //  create saved input container
-      $($input[i]).after('<textarea id="realOutput'+i+'" style="visibility:hidden" data-count="'+i+'"></textarea>');
+      $($input[i]).after('<textarea id="realOutput'+i+'" style="display:none" data-count="'+i+'"></textarea>');
       
       let button = document.getElementById("copy" + i);
       button.addEventListener("click", copyText);
