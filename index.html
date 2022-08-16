@@ -45,20 +45,13 @@
   //=====
   //EVENT
   //=====
-  
-    /*function copyElemForMobile(thisElem) {
-      thisElem.select();
-      thisElem.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-    }*/
 
     function copyText() {
 
       let myCount = this.dataset.count;
       let myRealOutput = document.getElementById("realOutput" + myCount);
-      // for mobile
-      //copyElemForMobile(getInput(myCount));
       
+      // for mobile
       myRealOutput.style.display = "block";
       myRealOutput.select();
       myRealOutput.setSelectionRange(0, 99999);
