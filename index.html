@@ -133,13 +133,13 @@
       for (let i = 0; i < myArray.length; i++) {
         const myArray2 = myArray[i].split(',');
         
-        myTbody += '&nbsp;<tr>';
+        myTbody += ' <tr>';
         
         for (let j = 0; j < myArray2.length; j++) {
-          myTbody += '\n&nbsp;&nbsp;<td>' + myArray2[j] + '</td>';
+          myTbody += '\n  <td>' + myArray2[j] + '</td>';
         }
         
-        myTbody += '\n&nbsp;</tr>';
+        myTbody += '\n </tr>';
         
       }
       myTbody += '\n</tbody>';
