@@ -9,7 +9,7 @@
 
   <title>Assist</title>
   <script>
-    
+
     //================
     // Global Function
     //================
@@ -37,20 +37,20 @@
     function setRealOutput(myCount, newText) {
       getRealOutput(myCount).value = newText;
       getRealOutput(myCount).innerHTML = newText;
-      
+
     }
   </script>
-  
+
   <script>
-  //=====
-  //EVENT
-  //=====
+    //=====
+    //EVENT
+    //=====
 
     function copyText() {
 
       let myCount = this.dataset.count;
       let myRealOutput = document.getElementById("realOutput" + myCount);
-      
+
       // for mobile
       myRealOutput.style.display = "block";
       myRealOutput.select();
@@ -61,50 +61,55 @@
       // for PC
       navigator.clipboard.writeText(myRealOutput.innerHTML);
     }
-    
+
     function inputIn() {
 
       let myCount = this.dataset.count;
-      
-     let inputText = getInputValue(myCount);
-     
-     let newText = inputFunctions[myCount](inputText);
+
+      let inputText = getInputValue(myCount);
+
+      let newText = inputFunctions[myCount](inputText);
 
       // save input function output
       setRealOutput(myCount, newText);
-      
+
       // display function output
       let displayedText = changeTagForDisplay(newText);
-      
+
       getOutput(myCount).innerHTML = displayedText;
     }
   </script>
-  
+
   <script>
-  //=================
-  // DISPLAY FUNCTION
-  //=================
-    
+    //=================
+    // DISPLAY FUNCTION
+    //=================
+
     function changeTagForDisplay(myText) {
       const wordChange = [
-        ['&', 'amp'],
-        ['<', 'lt'],
-        ['>', 'gt'],
-        [' ', 'nbsp'],
-        ['\n', '\n<br>'],
-        ['\t', '#9']
-        ];
-      
+        ['&',
+          'amp'],
+        ['<',
+          'lt'],
+        ['>',
+          'gt'],
+        [' ',
+          'nbsp'],
+        ['\n',
+          '\n<br>'],
+        ['\t',
+          '#9']
+      ];
+
       let newText = myText;
-      
+
       for (let i = 0; i < wordChange.length; i++) {
         let myOldWord = new RegExp(wordChange[i][0], 'g');
-        let myNewWord = (wordChange[i][0] != '\n') ? '&' + wordChange[i][1] + ';' : wordChange[i][1];
-        
+        let myNewWord = (wordChange[i][0] != '\n') ? '&' + wordChange[i][1] + ';': wordChange[i][1];
+
         newText = newText.replace(myOldWord, myNewWord);
       }
-    
-      //alert(newText);
+
       return newText;
     }
 
@@ -114,45 +119,47 @@
     //================
     // CUSTOM FUNCTION
     //================
-    
+
     function makeTable(myText) {
       const myArray = myText.split('\n');
       let myTable = '<table>\n';
       let myTbody = '<tbody>';
       for (let i = 0; i < myArray.length; i++) {
         const myArray2 = myArray[i].split(',');
-        
+
         myTbody += '\n <tr>';
-        
+
         for (let j = 0; j < myArray2.length; j++) {
           myTbody += '\n  <td>' + myArray2[j] + '</td>';
         }
-        
+
         myTbody += '\n </tr>';
-        
+
       }
       myTbody += '\n</tbody>';
       myTable += myTbody + '\n</table>';
-      
+
       return myTable;
     }
-    
+
     function makeH3Section(myText) {
       let myArray = myText.split('\n');
       let myNewText = "";
       for (let i = 0; i < myArray.length; i++) {
-        
-        if (myArray[i].length == 0) {break;}
+
+        if (myArray[i].length == 0) {
+          break;
+        }
         myNewText += '<h3>' + myArray[i] + '</h3>'
         +'\n<section>\n</section>\n\n';
       }
       return myNewText;
     }
-    
+
     function makeLoop(myText) {
       let myLoop = '';
       let myArray = myText;
-      
+
       myLoop = 'for (let i = 0; i < '
       + myArray + '.length; i++) '
       + '{\n\n'
@@ -212,7 +219,7 @@
       <section>
         <textarea></textarea>
       </section>
-      
+
       <h3>buat h3 dan section</h3>
       <section>
         <textarea></textarea>
@@ -245,15 +252,15 @@
 
       //  create saved input container
       $($input[i]).after('<textarea id="realOutput'+i+'" style="display:none" data-count="'+i+'"></textarea>');
-      
+
       // add class to stop construction if already downloaded.
-      
+
       let button = document.getElementById("copy" + i);
       button.addEventListener("click", copyText);
-      
+
       let myInput = document.getElementById("input" + i);
-        myInput.addEventListener("keyup", inputIn);
-      
+      myInput.addEventListener("keyup", inputIn);
+
     }
 
   </script>
