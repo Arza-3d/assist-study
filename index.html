@@ -156,8 +156,8 @@
       let myArray = myText.split(',');
       let myNewText = "";
       for (let i = 0, i < myArray.length, i++) {
-        myNewText = '<h3>' + myArray[0] + '</h3>'
-        +'\n<section'
+        myNewText += '\n<h3>' + myArray[0] + '</h3>'
+        +'\n<section>\n</section>';
       }
       return myNewText;
     }
