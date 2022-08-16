@@ -244,6 +244,8 @@
       //  create saved input container
       $($input[i]).after('<textarea id="realOutput'+i+'" style="display:none" data-count="'+i+'"></textarea>');
       
+      // add class to stop construction if already downloaded.
+      
       let button = document.getElementById("copy" + i);
       button.addEventListener("click", copyText);
       
