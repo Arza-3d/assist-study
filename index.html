@@ -46,11 +46,11 @@
   //EVENT
   //=====
   
-    function copyElemForMobile(thisElem) {
+    /*function copyElemForMobile(thisElem) {
       thisElem.select();
       thisElem.setSelectionRange(0, 99999);
       document.execCommand("copy");
-    }
+    }*/
 
     function copyText() {
 
@@ -67,7 +67,7 @@
       //alert(myRealOutput.innerHTML);
 
       // for PC
-      navigator.clipboard.writeText(myRealOutput.innerHTML);
+      navigator.clipboard.writeText(myOutput.innerHTML);
     }
     
     function inputIn() {
