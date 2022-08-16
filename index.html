@@ -158,9 +158,11 @@
     
     function makeLoop(myText) {
       let myLoop = '';
-      let myArray = my
+      let myArray = myText;
       
       myLoop = 'for (i = 0; i < '
+      + myArray + '.length; i++)
+      '
       
       return myLoop;
     }
