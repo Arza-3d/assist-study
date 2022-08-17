@@ -177,8 +177,8 @@
     function makeMozillaDevCssLink(myText) {
       let myCssProperty = myText;
       let myNewAnchor = '<a link="';
-      let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/font-family';
-      myn
+      let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/';
+      myNewAnchor += myCssProperty
       myNewAnchor += '" >\n';
       myNewAnchor += myCssProperty;
       myNewAnchor += '\n</a>'
@@ -191,7 +191,8 @@
       makeTable,
       makeH3Section,
       makeLoop,
-      replaceSpaceWithStrip
+      replaceSpaceWithStrip,
+      makeMozillaDevCssLink
     ];
   </script>
 
