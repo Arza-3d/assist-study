@@ -167,6 +167,7 @@
     
     function replaceSpaceWithStrip(myText) {
       
+      myText = myText.trim();
       myText = myText.replace(/ /g, '-');
       
       return myText;
