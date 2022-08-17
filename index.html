@@ -174,9 +174,9 @@
     
     function makeMozillaDevCssLink(myText) {
       let myCssProperty = myText;
-      let myNewAnchor = '<a link="';
+      let myNewAnchor = '<a href="';
       let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/';
-      myNewAnchor += myCssProperty
+      myNewAnchor += myLink + myCssProperty
       myNewAnchor += '" >\n';
       myNewAnchor += myCssProperty;
       myNewAnchor += '\n</a>'
