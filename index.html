@@ -177,8 +177,10 @@
     function makeMozillaDevCssLink(myText) {
       let myNewAnchor = '<a link="';
       let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/font-family';
-      myNewAnchor += '" >';
-      myNewAnchor += '\n';
+      myNewAnchor += '" >\n';
+      myNewAnchor += '';
+      myNewAnchor += '\n</a>'
+      return myNewAnchor;
     }
     
     const inputFunctions =
