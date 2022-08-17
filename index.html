@@ -166,12 +166,12 @@
     }
     
     function deleteExtraSpaces(myText) {
-      return myText.replace(/\s+/g, '').trim()
+      return myText.replace(/\s+/g, '').trim();
     }
     
     function replaceSpaceWithStrip(myText) {
       
-      myText = myText.trim();
+      myText = deleteExtraSpaces(myText);
       myText = myText.replace(/ /g, '-');
       return myText;
     }
