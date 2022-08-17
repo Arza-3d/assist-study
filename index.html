@@ -169,6 +169,7 @@
       
       myText = myText.trim();
       myText = myText.replace(/ /g, '-');
+      myText = myText.replace(/--/g, '-');
       
       return myText;
     }
