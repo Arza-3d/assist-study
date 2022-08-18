@@ -121,8 +121,8 @@
     function makeTextareaSection(myText) {
       return '<h3>' + myText + `</h3>
       <section>
-        <textarea>
-        </textarea>
+      <textarea>
+      </textarea>
       </section>`;
     }
 
@@ -196,7 +196,8 @@
     }
 
     function makeCSSSection(myText) {
-      let myArray =
+      let myArray = myText.split('\n');
+      for (let i = 0; i < myArray.length; i++) {}
       myText = replaceSpaceWithStrip(myText);
       return makeH3Section(myText);
     }
@@ -208,7 +209,7 @@
       makeTable,
       makeH3Section,
       makeLoop,
-      
+
       //css doc assist
       replaceSpaceWithStrip,
       makeMozillaDevCssLink,
@@ -285,7 +286,7 @@
       <section>
         <textarea></textarea>
       </section>
-      
+
       <h3>buat section CSS</h3>
       <section>
         <textarea>
