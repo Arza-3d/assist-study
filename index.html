@@ -201,10 +201,9 @@
       for (let i = 0; i < myArray.length; i++) {
         myArray[i] = replaceSpaceWithStrip(myArray[i]);
         myArray[i] = makeH3Section(myArray[i]);
-        
-        
+        myNewText += myArray[i];
       }
-      
+      return myText;
     }
 
     const inputFunctions =
