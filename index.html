@@ -197,12 +197,14 @@
 
     function makeCSSSection(myText) {
       let myArray = myText.split('\n');
+      let myNewText = '';
       for (let i = 0; i < myArray.length; i++) {
         myArray[i] = replaceSpaceWithStrip(myArray[i]);
         myArray[i] = makeH3Section(myArray[i]);
+        
+        
       }
-      myText = replaceSpaceWithStrip(myText);
-      return makeH3Section(myText);
+      
     }
 
     const inputFunctions =
