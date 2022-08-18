@@ -188,7 +188,8 @@
     }
     
     function makeCSSSection(myText) {
-      
+      myText = replaceSpaceWithStrip(myText);
+      return makeH3Section(myText);
     }
     
     const inputFunctions =
