@@ -185,7 +185,7 @@
     }
 
     function makeMozillaDevCssLink(myText) {
-      let myCssProperty = myText;
+      let myCssProperty = replaceSpaceWithStrip(myText);
       let myNewAnchor = '<a href="';
       let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/';
       myNewAnchor += myLink + myCssProperty
