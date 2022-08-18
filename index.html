@@ -117,12 +117,13 @@
     //================
     // CUSTOM FUNCTION
     //================
-    
+
     function makeTextareaSection(myText) {
-      return '<h3>' + myText + `<h3>
+      return
+      '<h3>' + myText + `<h3>
       <section>
-      \t<textarea>
-      \t</textarea>
+        <textarea>
+        </textarea>
       </section>`;
     }
 
@@ -172,18 +173,18 @@
       + '}'
       return myLoop;
     }
-    
+
     function deleteExtraSpaces(myText) {
       return myText.replace(/\s+/g, ' ').trim();
     }
-    
+
     function replaceSpaceWithStrip(myText) {
-      
+
       myText = deleteExtraSpaces(myText);
       myText = myText.replace(/ /g, '-');
       return myText;
     }
-    
+
     function makeMozillaDevCssLink(myText) {
       let myCssProperty = myText;
       let myNewAnchor = '<a href="';
@@ -194,12 +195,12 @@
       myNewAnchor += '\n</a>'
       return myNewAnchor;
     }
-    
+
     function makeCSSSection(myText) {
       myText = replaceSpaceWithStrip(myText);
       return makeH3Section(myText);
     }
-    
+
     const inputFunctions =
     [
       makeTextareaSection,
