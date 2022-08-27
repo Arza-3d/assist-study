@@ -95,120 +95,118 @@ function changeTagForDisplay(myText) {
   return newText;
 }
 
-    //================
-    // CUSTOM FUNCTION
-    //================
+//================
+// CUSTOM FUNCTION
+//================
 
-    function makeTextareaSection(myText) {
-      return '<h3>' + myText + `</h3>
-      <section>
-      <textarea>
-      </textarea>
-      </section>`;
+function makeTextareaSection(myText) {
+  return '<h3>' + myText + `</h3>
+  <section>
+  <textarea>
+  </textarea>
+  </section>`;
+}
+
+function makeTable(myText) {
+  const myArray = myText.split('\n');
+  let myTable = '<table>\n';
+  let myTbody = '<tbody>';
+  for (let i = 0; i < myArray.length; i++) {
+    const myArray2 = myArray[i].split(',');
+
+    myTbody += '\n <tr>';
+
+    for (let j = 0; j < myArray2.length; j++) {
+      myTbody += '\n  <td>' + myArray2[j] + '</td>';
     }
 
-    function makeTable(myText) {
-      const myArray = myText.split('\n');
-      let myTable = '<table>\n';
-      let myTbody = '<tbody>';
-      for (let i = 0; i < myArray.length; i++) {
-        const myArray2 = myArray[i].split(',');
+    myTbody += '\n </tr>';
 
-        myTbody += '\n <tr>';
+  }
+  myTbody += '\n</tbody>';
+  myTable += myTbody + '\n</table>';
 
-        for (let j = 0; j < myArray2.length; j++) {
-          myTbody += '\n  <td>' + myArray2[j] + '</td>';
-        }
+  return myTable;
+}
 
-        myTbody += '\n </tr>';
+function makeH3Section(myText) {
+  let myArray = myText.split('\n');
+  let myNewText = "";
+  for (let i = 0; i < myArray.length; i++) {
 
-      }
-      myTbody += '\n</tbody>';
-      myTable += myTbody + '\n</table>';
-
-      return myTable;
+    if (myArray[i].length == 0) {
+      break;
     }
+    myNewText += '<h3>' + myArray[i] + '</h3>'
+    +'\n<section>\n</section>\n\n';
+  }
+  return myNewText;
+}
 
-    function makeH3Section(myText) {
-      let myArray = myText.split('\n');
-      let myNewText = "";
-      for (let i = 0; i < myArray.length; i++) {
+function makeLoop(myText) {
+  let myLoop = '';
+  let myArray = myText;
 
-        if (myArray[i].length == 0) {
-          break;
-        }
-        myNewText += '<h3>' + myArray[i] + '</h3>'
-        +'\n<section>\n</section>\n\n';
-      }
-      return myNewText;
-    }
+  myLoop = 'for (let i = 0; i < '
+  + myArray + '.length; i++) '
+  + '{\n\n'
+  + '}'
+  return myLoop;
+}
 
-    function makeLoop(myText) {
-      let myLoop = '';
-      let myArray = myText;
+function deleteExtraSpaces(myText) {
+  return myText.replace(/\s+/g, ' ').trim();
+}
 
-      myLoop = 'for (let i = 0; i < '
-      + myArray + '.length; i++) '
-      + '{\n\n'
-      + '}'
-      return myLoop;
-    }
+function replaceSpaceWithStrip(myText) {
 
-    function deleteExtraSpaces(myText) {
-      return myText.replace(/\s+/g, ' ').trim();
-    }
+  myText = deleteExtraSpaces(myText);
+  myText = myText.replace(/ /g, '-');
+  return myText;
+}
 
-    function replaceSpaceWithStrip(myText) {
+function makeMozillaDevCssLink(myText) {
+  let myCssProperty = replaceSpaceWithStrip(myText);
+  let myNewAnchor = '<a href="';
+  let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/';
+  myNewAnchor += myLink + myCssProperty
+  myNewAnchor += '" >\n';
+  myNewAnchor += myCssProperty;
+  myNewAnchor += '\n</a>'
+  return myNewAnchor;
+}
 
-      myText = deleteExtraSpaces(myText);
-      myText = myText.replace(/ /g, '-');
-      return myText;
-    }
+function makeCSSSection(myText) {
+  let myArray = myText.split('\n');
+  let myNewText = '';
+  for (let i = 0; i < myArray.length; i++) {
+    myArray[i] = replaceSpaceWithStrip(myArray[i]);
+    myArray[i] = makeH3Section(myArray[i]);
+    myNewText += myArray[i];
+  }
+  return myNewText;
+}
 
-    function makeMozillaDevCssLink(myText) {
-      let myCssProperty = replaceSpaceWithStrip(myText);
-      let myNewAnchor = '<a href="';
-      let myLink = 'https://developer.mozilla.org/en-US/docs/Web/CSS/';
-      myNewAnchor += myLink + myCssProperty
-      myNewAnchor += '" >\n';
-      myNewAnchor += myCssProperty;
-      myNewAnchor += '\n</a>'
-      return myNewAnchor;
-    }
+function makeCSSPropertiesTable(myText) {
+  myText = replaceSpaceWithStrip(myText);
+  myText = makeTable(myText);
 
-    function makeCSSSection(myText) {
-      let myArray = myText.split('\n');
-      let myNewText = '';
-      for (let i = 0; i < myArray.length; i++) {
-        myArray[i] = replaceSpaceWithStrip(myArray[i]);
-        myArray[i] = makeH3Section(myArray[i]);
-        myNewText += myArray[i];
-      }
-      return myNewText;
-    }
-    
-    function makeCSSPropertiesTable(myText) {
-      myText = replaceSpaceWithStrip(myText);
-      myText = makeTable(myText);
-      
-      return myText;
-    }
-    
-    function getW3SchoolProperties() {
-      
-    }
+  return myText;
+}
 
-    const inputFunctions =
-    [
-      makeTextareaSection,
-      changeTagForDisplay,
-      makeTable,
-      makeH3Section,
-      makeLoop,
+function getW3SchoolProperties() {}
 
-      //css doc assist
-      replaceSpaceWithStrip,
-      makeMozillaDevCssLink,
-      makeCSSSection,
-      makeCSSPropertiesTable
-    ];
+const inputFunctions =
+[
+  makeTextareaSection,
+  changeTagForDisplay,
+  makeTable,
+  makeH3Section,
+  makeLoop,
+
+  //css doc assist
+  replaceSpaceWithStrip,
+  makeMozillaDevCssLink,
+  makeCSSSection,
+  makeCSSPropertiesTable
+];
