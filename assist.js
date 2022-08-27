@@ -28,7 +28,6 @@ function setRealOutput(myCount, newText) {
 
 }
 
-
 //=====
 //EVENT
 //=====
@@ -64,4 +63,34 @@ function inputIn() {
   let displayedText = changeTagForDisplay(newText);
 
   getOutput(myCount).innerHTML = displayedText;
+}
+
+//=================
+// DISPLAY FUNCTION
+//=================
+
+function changeTagForDisplay(myText) {
+  const wordChange = [
+    ['&',
+      'amp'],
+    ['<',
+      'lt'],
+    ['>',
+      'gt'],
+    [' ',
+      'nbsp'],
+    ['\n',
+      '\n<br>']
+  ];
+
+  let newText = myText;
+
+  for (let i = 0; i < wordChange.length; i++) {
+    let myOldWord = new RegExp(wordChange[i][0], 'g');
+    let myNewWord = (wordChange[i][0] != '\n') ? '&' + wordChange[i][1] + ';': wordChange[i][1];
+
+    newText = newText.replace(myOldWord, myNewWord);
+  }
+
+  return newText;
 }
