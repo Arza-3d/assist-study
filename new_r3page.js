@@ -125,28 +125,17 @@ let newR3Page = `
             </section>
 
         </div>
-        <div data-title-r3="property">
-            <h2>properti string</h2>
-            <h3>tabel properti string</h3>
+        <div data-title-r3=".">
+            <h2>.</h2>
+            <h3>.</h3>
 
             <section>
-                <a href="https://docs.google.com/spreadsheets/d/1qjAhyzcZc16nu4uLi73FfoyNGJ_XOkJU61LXz8stRLA/edit?usp=sharing">googlesheet properti string</a>
-
-                <table data-JSON-full-r3="pyStringFunction" class="filter-r3">
-
-                </table>
-
+               
             </section>
 
         </div>
     </main>
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
-
-    <script src="database/python-string_properties.json"></script>
-    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/modular/table-JSON/ar3-JSON-table-full-1.js"></script>
-    <script src="https://raw.githack.com/Arza-3d/ar3.js/master/modular/table-filter/ar3-table-filter-1.js"></script>
-
-    
 </body>
 </html>
 `
