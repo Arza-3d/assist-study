@@ -1,4 +1,6 @@
 function copyText(myText) {
+  
+  alert('copy start ');
 
   let tempText = document.createElement('textarea');
   tempText.id = 'myTemporaryText';
