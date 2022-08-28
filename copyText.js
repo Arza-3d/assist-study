@@ -11,9 +11,9 @@ function copyText(myText) {
   tempText.value = myText;
   
   tempText.style.display = "block";
-  myRealOutput.select();
-  myRealOutput.setSelectionRange(0, 99999);
+  tempText.select();
+  tempText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  myRealOutput.style.display = "none";
+  tempText.style.display = "none";
   //create document
 }
