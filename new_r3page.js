@@ -8,7 +8,7 @@ let newR3Page = `
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
 
-    <title>.</title>
+    <title>` + pageTitle + `</title>
 </head>
 <body
     data-repo-r3="https://github.com/Arza-3d/doc-py-string"
