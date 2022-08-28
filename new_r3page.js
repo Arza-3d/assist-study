@@ -1,3 +1,5 @@
+let pageTitle = '';
+
 let newR3Page = `
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
