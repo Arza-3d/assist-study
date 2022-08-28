@@ -1,0 +1,3 @@
+function copyText(myText) {
+  document.
+}
