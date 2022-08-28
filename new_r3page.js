@@ -51,5 +51,7 @@ let newR3Page = `
 function makeNewR3Page(myPageTitle, myRepoTitle) {
   
   
-  let ne
+  let myNewR3Page;
+  
+  return myNewR3Page;
 }
