@@ -6,5 +6,8 @@ function copyText(myText) {
   tempText.setAttribute();
   
   document.body.appendChild(tempText);
+  
+  tempText.innerHTML = myText;
+  tempText.value = myText;
   //create document
 }
