@@ -1,3 +1,3 @@
 function copyText(myText) {
-  document.
+  document.getElementsByTagName('body')[0];
 }
