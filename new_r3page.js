@@ -28,7 +28,7 @@ let newR3Page = `
             </tr>
         </table>
         <p>
-            Catatan belajar SQL
+            lorem ipsum
         </p>
     </header>
     <main class="aside-nav-target-r3">
@@ -47,3 +47,5 @@ let newR3Page = `
 </body>
 </html>
 `
+
+func
