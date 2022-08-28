@@ -25,8 +25,8 @@ let newR3Page = `
     >
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
     <header>
-        <h1>belajar SQL</h1>
-        <h4>rangkuman SQL</h4>
+        <h1>.</h1>
+        <h4>.</h4>
         <table>
             <tr>
                 <td>project repo</td>
@@ -75,56 +75,8 @@ let newR3Page = `
             </section>
 
         </div>
-        <div data-title-r3="dll">
-            <h2>dll</h2>
-            <h3>comment</h3>
-            <section>
-                <code>-- <i>komen aq</i></code>
-            </section>
-
-            <h3>multi</h3>
-            <section>
-                <code>//</code>
-            </section>
-            <h3>installer</h3>
-            <section>
-                <a href="https://www.google.com/search?q=installing+sql+server+2019+step+by+step&oq=installing+sql&aqs=chrome.0.0i512j69i57j0i20i263i512j0i512l6.7606j0j7">how to install</a>
-                <h4>link</h4>
-                <table border="0">
-                    <thead>
-                        <tr>
-                            <th>dev</th>
-                            <th>link</th>
-                        </tr>
-                        
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-                <h4>how</h4>
-            </section>
-            
-            <h3>doc</h3>
-            <section>
-                
-            </section>
-            
-        </div>
-        <div data-title-r3="format">
-
-            <h2>string format</h2>
-
-            <h3>string format</h3>
-            <section>
-
-            </section>
-
-        </div>
+        
+        
         <div data-title-r3=".">
             <h2>.</h2>
             <h3>.</h3>
