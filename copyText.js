@@ -18,7 +18,7 @@ function copyText(myText) {
   
   document.body.removeChild(tempText);
   
-  alert(`sudah dikopi` + myText);
+  alert(`sudah dikopi \n` + myText);
   
   //create document
 }
