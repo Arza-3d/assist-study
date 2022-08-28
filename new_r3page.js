@@ -13,7 +13,7 @@ let newR3Page = `
     <title>` + pageTitle + `</title>
 </head>
 <body
-    data-repo-r3="https://github.com/Arza-3d/doc-py-string"
+    data-repo-r3="https://github.com/Arza-3d/` + repoTi + `"
     data-headers-r3="> div > h2| > div > h3| div > section > h4"
     >
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
