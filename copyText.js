@@ -1,3 +1,5 @@
 function copyText(myText) {
-  document.getElementsByTagName('body')[0];
+  let docBody = document.body;
+  
+  //create document
 }
