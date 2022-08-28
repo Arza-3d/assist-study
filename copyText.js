@@ -1,9 +1,10 @@
 function copyText(myText) {
-  let docBody = document.body;
+
   let tempText = document.createElement('textarea');
   tempText.id = 'myTemporaryText';
   
-  tempText.setAttribute()
+  tempText.setAttribute();
   
+  document.body.appendChild(tempText);
   //create document
 }
