@@ -15,5 +15,7 @@ function copyText(myText) {
   tempText.setSelectionRange(0, 99999);
   document.execCommand("copy");
   tempText.style.display = "none";
+  
+  document.body.removeChild(tempText);
   //create document
 }
