@@ -48,4 +48,8 @@ let newR3Page = `
 </html>
 `
 
-func
+function makeNewR3Page(myPageTitle, myRepoTitle) {
+  
+  
+  let ne
+}
