@@ -1,26 +1,18 @@
 function copyText(myText) {
-  
+
   alert('copy start ');
 
   let tempText = document.createElement('textarea');
   tempText.id = 'myTemporaryText';
-  
-  //tempText.setAttribute();
-  
-  document.body.appendChild(tempText);
-  
+
+  document.body.prepend(tempText);
+
+  tempText.style.display = "block";
   tempText.innerHTML = myText;
   tempText.value = myText;
-  
-  tempText.style.display = "block";
+
+
   tempText.select();
   tempText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  tempText.style.display = "none";
-  
-  document.body.removeChild(tempText);
-  
-  alert(`sudah dikopi \n` + myText);
-  
-  //create document
 }
