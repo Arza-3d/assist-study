@@ -62,7 +62,9 @@
       myRealOutput.style.display = "none";
 
       // for PC
-      let myCopiedText = myRealOutput.innerHTML.replaceAll(//g,)
+      let myCopiedText = myRealOutput.innerHTML.replaceAll(/&gt;/g, ">");
+      
+      myCopiedText.replaceAll(/&lt;/, ">" );
       
      navigator.clipboard.writeText(myRealOutput.innerHTML);
 
