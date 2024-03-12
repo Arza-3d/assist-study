@@ -65,7 +65,9 @@
      // navigator.clipboard.writeText(myRealOutput.innerHTML);
 
       // navigator.clipboard.writeText(myRealOutput.innerHTML);
-      navigator.clipboard.writeText(myRealOutput.innerHTML.replaceAll(/&gt;/g,">"));
+      navigator.clipboard.writeText(myRealOutput.innerHTML
+      .replaceAll(/&gt;/g,">")
+      .replaceAll(/&lt;/g, "<"));
 
 
     }
