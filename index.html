@@ -7,8 +7,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <!-- migrasi js ke sini-/->
-  <script src="https://raw.githack.com/Arza-3d/assist-study/master/assist.js"></script>
-  <!-/--->
+    <script src="https://raw.githack.com/Arza-3d/assist-study/master/assist.js"></script>
+    <!-/--->
   <script type="text/javascript" charset="utf-8">
     //================
     // Global Function
@@ -27,11 +27,11 @@
     }
 
     function getRealOutput(myCount) {
-      
+
       let myRealOutput = document.getElementById("realOutput" + myCount);
       //alert('val ' + myRealOutput.value);
       //alert('inner ' + myRealOutput.innerHTML);
-      
+
       return myRealOutput;
     }
 
@@ -63,6 +63,11 @@
 
       // for PC
       navigator.clipboard.writeText(myRealOutput.innerHTML);
+
+      // navigator.clipboard.writeText(myRealOutput.innerHTML);
+      navigator.clipboard.writeText(myRealOutput.innerHTML.);
+
+
     }
 
     function inputIn() {
@@ -210,20 +215,20 @@
 
       return myText;
     }
-    
+
     function makeGithubPageLink(myText) {
       return 'https://arza-3d.github.io/' + myText +'/';
     }
 
 
-function makeGitRepoLink(myText) {
-  return 'https://github.com/Arza-3d/' + myText;
-}
+    function makeGitRepoLink(myText) {
+      return 'https://github.com/Arza-3d/' + myText;
+    }
     const inputFunctions =
     [
       makeGithubPageLink,
       makeGitRepoLink,
-      
+
       makeTextareaSection,
       changeTagForDisplay,
       makeTable,
@@ -264,19 +269,19 @@ function makeGitRepoLink(myText) {
     </p>
   </header>
   <main class="aside-nav-target-r3">
-<div data-title-r3="link">
-  <h2>bikin link</h2>
-  <h3>link page github</h3>
-  <section>
-    <textarea></textarea>
-  </section>
-  
-  <h3>link repo</h3>
-  <section>
-    <textarea placeholder="repo-name"></textarea>
-  </section>
-  
-</div>
+    <div data-title-r3="link">
+      <h2>bikin link</h2>
+      <h3>link page github</h3>
+      <section>
+        <textarea></textarea>
+      </section>
+
+      <h3>link repo</h3>
+      <section>
+        <textarea placeholder="repo-name"></textarea>
+      </section>
+
+    </div>
     <div data-title-r3="bantu catatan html">
 
       <h2>assist dokumen html</h2>
@@ -314,7 +319,7 @@ function makeGitRepoLink(myText) {
         <textarea></textarea>
       </section>
     </div>
-    
+
     <div data-title-r3='bantu catet css'>
       <h2>bantu catatan css</h2>
       <h3>ubah spasi jadi strip</h3>
