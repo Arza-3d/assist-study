@@ -64,7 +64,7 @@
       // for PC
       let myCopiedText = myRealOutput.innerHTML.replaceAll(/&gt;/g, ">");
       
-      myCopiedText.replaceAll(/&lt;/, ">" );
+      myCopiedText = myCopiedText.replaceAll(/&lt;/, ">" );
       
      navigator.clipboard.writeText(myCopiedText);
 
