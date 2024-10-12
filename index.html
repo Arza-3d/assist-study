@@ -7,8 +7,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <!-- migrasi js ke sini-/->
-    <script src="https://raw.githack.com/Arza-3d/assist-study/master/assist.js"></script>
-    <!-/--->
+      <script src="https://raw.githack.com/Arza-3d/assist-study/master/assist.js"></script>
+      <!-/--->
   <script type="text/javascript" charset="utf-8">
     //================
     // Global Function
@@ -63,10 +63,10 @@
 
       // for PC
       let myCopiedText = myRealOutput.innerHTML.replaceAll(/&gt;/g, ">");
-      
-      myCopiedText = myCopiedText.replaceAll(/&lt;/, ">" );
-      
-     navigator.clipboard.writeText(myCopiedText);
+
+      myCopiedText = myCopiedText.replaceAll(/&lt;/, ">");
+
+      navigator.clipboard.writeText(myCopiedText);
 
     }
 
@@ -224,29 +224,32 @@
     function makeGitRepoLink(myText) {
       return 'https://github.com/Arza-3d/' + myText;
     }
-    
-    function mangapillChapter(titleIndexChapter) {
-  let mangaTitle, mangaIndex, mangaLastChapter;
-  let mangaData = titleIndexChapter.split(",");
-  
-  mangaTitle = mangaData[0];
-  mangaIndex = mangaData[1];
-  
-  if (mangaData.length < 3) {
-    mangaLastChapter = "$A$1";
-  } else {
-    mangaLastChapter = titleIndexChapter[2];
-  }
-  alert(mangaTitle+", " +mangaIndex+", " mangaLastChapter);
-  
-  return `
-  =IF(row()>`+ mangaLastChapter+`+1, ,HYPERLINK("https://mangapill.com/chapters/`+ mangaIndex +`-10" & if(row()-1>99,row()-1, if(row()-1>9, "0" & row()-1, "00" & row()-1)) & "000/`+ mangaTitle +`-chapter-" & row()-1, "mpc " & row()-1))
 
-  `;
-  
-  
-}
-    
+    function mangapillChapter(titleIndexChapter) {
+      let mangaTitle,
+      mangaIndex,
+      mangaLastChapter;
+      let mangaData = titleIndexChapter.split(",");
+
+      mangaTitle = mangaData[0];
+      mangaIndex = mangaData[1];
+
+      if (mangaData.length < 3) {
+        mangaLastChapter = "$A$1";
+      } else {
+        mangaLastChapter = titleIndexChapter[2];
+      }
+
+      alert(mangaTitle+", " +mangaIndex+", " mangaLastChapter);
+
+      return `
+      =IF(row()>`+ mangaLastChapter+`+1, ,HYPERLINK("https://mangapill.com/chapters/`+ mangaIndex +`-10" & if(row()-1>99,row()-1, if(row()-1>9, "0" & row()-1, "00" & row()-1)) & "000/`+ mangaTitle +`-chapter-" & row()-1, "mpc " & row()-1))
+
+      `;
+
+
+    }
+
     const inputFunctions =
     [
       makeGithubPageLink,
@@ -263,12 +266,12 @@
       makeMozillaDevCssLink,
       makeCSSSection,
       makeCSSPropertiesTable,
-      
+
       //mangapill
       mangapillChapter
     ];
-    
-    
+
+
 
   </script>
   <!---->
@@ -369,7 +372,7 @@
       <section>
         <textarea></textarea>
       </section>
-      
+
     </div>
     <div data-title-r3="manga">
       <h2>manga</h2>
