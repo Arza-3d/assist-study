@@ -224,32 +224,8 @@
     function makeGitRepoLink(myText) {
       return 'https://github.com/Arza-3d/' + myText;
     }
-    const inputFunctions =
-    [
-      makeGithubPageLink,
-      makeGitRepoLink,
-
-      makeTextareaSection,
-      changeTagForDisplay,
-      makeTable,
-      makeH3Section,
-      makeLoop,
-
-      //css doc assist
-      replaceSpaceWithStrip,
-      makeMozillaDevCssLink,
-      makeCSSSection,
-      makeCSSPropertiesTable,
-      
-      //mangapi
-      mangapillChapter
-    ];
     
-    //mangapill
-    
-//=IF(row()>81+1, ,HYPERLINK("https://mangapill.com/chapters/651-10" & if(row()-1>99,row()-1, if(row()-1>9, "0" & row()-1, "00" & row()-1)) & "000/boruto-chapter-" & row()-1, "mpc " & row()-1))
-
-function mangapillChapter(titleIndexChapter) {
+    function mangapillChapter(titleIndexChapter) {
   let mangaTitle, mangaIndex, mangaLastChapter;
   let mangaData = titleIndexChapter.split(",");
   
@@ -269,6 +245,30 @@ function mangapillChapter(titleIndexChapter) {
   
   
 }
+    
+    const inputFunctions =
+    [
+      makeGithubPageLink,
+      makeGitRepoLink,
+
+      makeTextareaSection,
+      changeTagForDisplay,
+      makeTable,
+      makeH3Section,
+      makeLoop,
+
+      //css doc assist
+      replaceSpaceWithStrip,
+      makeMozillaDevCssLink,
+      makeCSSSection,
+      makeCSSPropertiesTable,
+      
+      //mangapill
+      mangapillChapter
+    ];
+    
+    
+
   </script>
   <!---->
 
