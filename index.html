@@ -248,7 +248,22 @@
 
 function mangapillChapter(titleIndexChapter) {
   let mangaTitle, mangaIndex, mangaLastChapter;
-  let m
+  let mangaData = titleIndexChapter.split(",");
+  
+  mangaTitle = mangaData[0];
+  mangaIndex = mangaData[1];
+  
+  if (mangaData.length < 2) {
+    mangaLastChapter = "$A$1";
+  } else {
+    mangaLastChapter = titleIndexChapter[2];
+  }
+  
+  return `
+  =IF(row()>`+ mangaLastChapter+`+1, ,HYPERLINK("https://mangapill.com/chapters/`+ mangaIndex +`-10" & if(row()-1>99,row()-1, if(row()-1>9, "0" & row()-1, "00" & row()-1)) & "000/`+ mangaTitle +`-chapter-" & row()-1, "mpc " & row()-1))
+
+  `;
+  
   
 }
   </script>
